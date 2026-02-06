@@ -1,0 +1,150 @@
+/* ========================================
+   WHY CHOOSE US - Features Section
+   ======================================== */
+.section {
+    padding: 5rem 1.5rem;
+    background: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Section Header */
+.sectionHeader {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.5rem 1.25rem;
+    background: rgba(255, 107, 0, 0.1);
+    color: #FF6B00;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 107, 0, 0.2);
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-weight: 800;
+    color: #0E1A4D;
+    margin: 0 0 0.75rem;
+}
+
+.highlight {
+    color: #FF6B00;
+}
+
+.subtitle {
+    color: #6c757d;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* Features Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+/* Feature Card */
+.card {
+    background: #f8f9fa;
+    border-radius: 16px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.card:hover {
+    background: #fff;
+    border-color: rgba(255, 107, 0, 0.2);
+    box-shadow: 0 10px 40px rgba(14, 26, 77, 0.08);
+    transform: translateY(-4px);
+}
+
+.cardIcon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    font-size: 1.75rem;
+    background: rgba(255, 107, 0, 0.1);
+    border-radius: 14px;
+    margin-bottom: 1rem;
+}
+
+.cardTitle {
+    font-family: var(--font-heading);
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #0E1A4D;
+    margin: 0 0 0.5rem;
+}
+
+.cardDesc {
+    font-size: 0.9rem;
+    color: #6c757d;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* CTA */
+.cta {
+    text-align: center;
+    margin-top: 2.5rem;
+}
+
+.ctaLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #0E1A4D;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.ctaLink:hover {
+    color: #FF6B00;
+}
+
+.arrow {
+    transition: transform 0.2s ease;
+}
+
+.ctaLink:hover .arrow {
+    transform: translateX(4px);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .section {
+        padding: 3rem 1rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 1.5rem;
+    }
+}

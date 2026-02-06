@@ -1,0 +1,185 @@
+.page {
+    padding-top: 80px;
+}
+
+.hero {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #fff5eb 0%, #f0f7ff 100%);
+    text-align: center;
+}
+
+.hero h1 {
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    color: var(--gray-500);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.section {
+    padding: 5rem 0;
+}
+
+.sectionHeader {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.sectionHeader h2 {
+    margin-bottom: 1rem;
+}
+
+.sectionHeader p {
+    color: var(--gray-500);
+}
+
+.missionGrid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.missionContent h2 {
+    margin-bottom: 1.5rem;
+}
+
+.missionContent p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--gray-600);
+}
+
+.visualCard {
+    padding: 2.5rem;
+    background: linear-gradient(135deg, var(--accent), #001845);
+    color: white;
+    border-radius: 1.5rem;
+}
+
+.visualCard h3 {
+    color: var(--secondary);
+    margin-bottom: 1rem;
+}
+
+.visualCard p {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.7;
+    margin: 0;
+}
+
+.statsSection {
+    padding: 3rem 0;
+    background: var(--gray-50);
+}
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.stat {
+    text-align: center;
+}
+
+.statValue {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+.statLabel {
+    font-size: 1rem;
+    color: var(--gray-500);
+}
+
+.valuesGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.valueCard {
+    padding: 2rem;
+    background: white;
+    border: 1px solid var(--gray-100);
+    border-radius: 1rem;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.valueCard:hover {
+    border-color: var(--primary);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 40px rgba(207, 89, 6, 0.1);
+}
+
+.valueIcon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.valueCard h3 {
+    font-size: 1.125rem;
+    margin-bottom: 0.75rem;
+}
+
+.valueCard p {
+    font-size: 0.9rem;
+    color: var(--gray-500);
+    margin: 0;
+}
+
+.ctaSection {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, var(--accent), #001845);
+    text-align: center;
+    color: white;
+}
+
+.ctaSection h2 {
+    color: white;
+    margin-bottom: 0.75rem;
+}
+
+.ctaSection p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 2rem;
+}
+
+.ctaButtons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 1024px) {
+    .missionGrid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .statsGrid,
+    .valuesGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .valuesGrid {
+        grid-template-columns: 1fr;
+    }
+}

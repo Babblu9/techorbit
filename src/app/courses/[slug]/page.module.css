@@ -1,0 +1,250 @@
+.page {
+    padding-top: 80px;
+}
+
+.hero {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, var(--accent) 0%, #001845 100%);
+    color: white;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.heroContent {
+    max-width: 700px;
+}
+
+.breadcrumb {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 1rem;
+}
+
+.breadcrumb a {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.breadcrumb a:hover {
+    color: white;
+}
+
+.hero h1 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.description {
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.meta {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.ctas {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.content {
+    padding: 4rem 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 3rem;
+    align-items: start;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--gray-900);
+}
+
+.highlights {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.highlight {
+    padding: 1rem 1.25rem;
+    background: var(--gray-50);
+    border-radius: 0.75rem;
+    font-size: 0.95rem;
+    color: var(--gray-700);
+}
+
+.curriculum {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.module {
+    border: 1px solid var(--gray-200);
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
+
+.moduleHeader {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--gray-800);
+    background: var(--gray-50);
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.moduleHeader:hover {
+    background: var(--gray-100);
+}
+
+.moduleHeader.open {
+    background: var(--primary);
+    color: white;
+}
+
+.arrow {
+    font-size: 1.25rem;
+}
+
+.moduleContent {
+    padding: 1.25rem 1.5rem;
+    background: white;
+}
+
+.moduleContent ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.moduleContent li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--gray-600);
+    font-size: 0.9rem;
+}
+
+.moduleContent li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+}
+
+.tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.tool {
+    padding: 0.75rem 1.25rem;
+    background: linear-gradient(135deg, rgba(207, 89, 6, 0.1), rgba(255, 208, 54, 0.1));
+    color: var(--gray-800);
+    font-weight: 500;
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.outcomes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.outcome {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: var(--gray-50);
+    border-radius: 0.75rem;
+    font-size: 0.95rem;
+    color: var(--gray-700);
+}
+
+.outcomeIcon {
+    font-size: 1.25rem;
+}
+
+/* Sidebar */
+.sidebar {
+    position: sticky;
+    top: 100px;
+}
+
+.enquiryCard {
+    padding: 2rem;
+    background: white;
+    border: 1px solid var(--gray-200);
+    border-radius: 1rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.enquiryCard h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.enquiryCard>p {
+    font-size: 0.9rem;
+    color: var(--gray-500);
+    margin-bottom: 1.5rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        position: static;
+    }
+
+    .highlights,
+    .outcomes {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .ctas {
+        flex-direction: column;
+    }
+}

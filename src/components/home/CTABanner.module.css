@@ -1,0 +1,151 @@
+/* ========================================
+   CTA BANNER - Final Call to Action
+   ======================================== */
+.section {
+    padding: 5rem 1.5rem;
+    background: linear-gradient(135deg, #0E1A4D 0%, #1A2A6C 50%, #0A1235 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse at top right, rgba(255, 107, 0, 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse at bottom left, rgba(26, 42, 108, 0.5) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+}
+
+.content {
+    text-align: center;
+}
+
+.title {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-weight: 800;
+    color: #fff;
+    margin: 0 0 1rem;
+    line-height: 1.2;
+}
+
+.highlight {
+    background: linear-gradient(135deg, #FF6B00, #FFB800);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0 0 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Action Buttons */
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.btnPrimary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background: #FF6B00;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(255, 107, 0, 0.35);
+}
+
+.btnPrimary:hover {
+    background: #E55A00;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(255, 107, 0, 0.45);
+    color: #fff;
+}
+
+.btnOutline {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background: transparent;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.btnOutline:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #fff;
+    transform: translateY(-3px);
+    color: #fff;
+}
+
+.icon {
+    font-size: 0.875rem;
+}
+
+/* Trust Items */
+.trust {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.trustItem {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .section {
+        padding: 3rem 1rem;
+    }
+
+    .actions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btnPrimary,
+    .btnOutline {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .trust {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+}

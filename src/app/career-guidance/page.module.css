@@ -1,0 +1,140 @@
+.page {
+    padding-top: 80px;
+}
+
+.hero {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #fff5eb 0%, #f0f7ff 100%);
+    text-align: center;
+}
+
+.hero h1 {
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    color: var(--gray-500);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.statsSection {
+    padding: 3rem 0;
+    background: var(--accent);
+}
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.stat {
+    text-align: center;
+    color: white;
+}
+
+.statValue {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+.statLabel {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.section {
+    padding: 5rem 0;
+}
+
+.sectionHeader {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.sectionHeader h2 {
+    margin-bottom: 1rem;
+}
+
+.sectionHeader p {
+    color: var(--gray-500);
+}
+
+.servicesGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.serviceCard {
+    padding: 2rem;
+    background: white;
+    border: 1px solid var(--gray-100);
+    border-radius: 1rem;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.serviceCard:hover {
+    border-color: var(--primary);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 40px rgba(207, 89, 6, 0.1);
+}
+
+.serviceIcon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.serviceCard h3 {
+    font-size: 1.125rem;
+    margin-bottom: 0.75rem;
+}
+
+.serviceCard p {
+    font-size: 0.9rem;
+    color: var(--gray-500);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.ctaSection {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, var(--accent), #001845);
+    text-align: center;
+    color: white;
+}
+
+.ctaSection h2 {
+    color: white;
+    margin-bottom: 0.75rem;
+}
+
+.ctaSection p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 1024px) {
+
+    .statsGrid,
+    .servicesGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .servicesGrid {
+        grid-template-columns: 1fr;
+    }
+}

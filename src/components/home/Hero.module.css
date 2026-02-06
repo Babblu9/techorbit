@@ -1,0 +1,308 @@
+/* ========================================
+   HERO - Dark Blue Theme with Orange Accents
+   ======================================== */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8rem 1.5rem 4rem;
+    overflow: hidden;
+}
+
+.background {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, #0E1A4D 0%, #1A2A6C 50%, #0A1235 100%);
+}
+
+.gradientOverlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center top, rgba(26, 42, 108, 0.8) 0%, transparent 60%),
+        radial-gradient(ellipse at center bottom, rgba(10, 18, 53, 0.9) 0%, transparent 60%);
+}
+
+.container {
+    position: relative;
+    z-index: 10;
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* Trust Badge - Top */
+.trustBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1.5rem;
+    background: rgba(255, 107, 0, 0.15);
+    border: 1px solid rgba(255, 107, 0, 0.4);
+    border-radius: 50px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #FF6B00;
+    animation: fadeInDown 0.6s ease;
+}
+
+.sparkle {
+    font-size: 1rem;
+}
+
+/* Main Headline */
+.headline {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    line-height: 1.15;
+    color: #ffffff;
+    margin: 0;
+    animation: fadeInUp 0.6s ease 0.1s both;
+}
+
+.highlight {
+    display: block;
+    background: linear-gradient(135deg, #FF6B00, #FFB800);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Subheadline */
+.subheadline {
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+    animation: fadeInUp 0.6s ease 0.2s both;
+}
+
+/* CTA Buttons */
+.ctaGroup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    animation: fadeInUp 0.6s ease 0.3s both;
+}
+
+.btnPrimary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background: #FF6B00;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(255, 107, 0, 0.35);
+}
+
+.btnPrimary:hover {
+    background: #E55A00;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(255, 107, 0, 0.45);
+}
+
+.btnOutline {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background: transparent;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.btnOutline:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #fff;
+    transform: translateY(-3px);
+}
+
+.btnIcon {
+    font-size: 0.9rem;
+}
+
+/* Trust Indicators Row */
+.indicators {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    animation: fadeInUp 0.6s ease 0.4s both;
+}
+
+.indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1.25rem;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+}
+
+.indicator:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+}
+
+.indicatorIcon {
+    font-size: 1rem;
+}
+
+/* Stats Grid */
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    width: 100%;
+    max-width: 900px;
+    margin-top: 2rem;
+    animation: fadeInUp 0.6s ease 0.5s both;
+}
+
+.statCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 1.5rem 1rem;
+    background: rgba(14, 26, 77, 0.6);
+    border: 1px solid rgba(255, 107, 0, 0.3);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.statCard:hover {
+    background: rgba(14, 26, 77, 0.8);
+    border-color: rgba(255, 107, 0, 0.5);
+    transform: translateY(-4px);
+}
+
+.statNumber {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #FF6B00;
+    line-height: 1;
+}
+
+.statLabel {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .statsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 7rem 1rem 3rem;
+    }
+
+    .headline {
+        font-size: clamp(2rem, 7vw, 2.75rem);
+    }
+
+    .subheadline {
+        font-size: 1rem;
+    }
+
+    .ctaGroup {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btnPrimary,
+    .btnOutline {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .indicators {
+        gap: 0.5rem;
+    }
+
+    .indicator {
+        padding: 0.5rem 1rem;
+        font-size: 0.75rem;
+    }
+
+    .statNumber {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .statsGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+
+    .statCard {
+        padding: 1rem 0.75rem;
+    }
+
+    .statNumber {
+        font-size: 1.75rem;
+    }
+
+    .statLabel {
+        font-size: 0.75rem;
+    }
+}

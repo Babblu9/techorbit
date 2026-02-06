@@ -1,0 +1,110 @@
+.page {
+    padding-top: 80px;
+}
+
+.hero {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #fff5eb 0%, #f0f7ff 100%);
+    text-align: center;
+}
+
+.hero h1 {
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    color: var(--gray-500);
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.content {
+    padding: 5rem 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.info h2 {
+    margin-bottom: 1rem;
+}
+
+.info>p {
+    color: var(--gray-500);
+    margin-bottom: 2rem;
+}
+
+.contactCards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contactCard {
+    padding: 1.5rem;
+    background: var(--gray-50);
+    border-radius: 1rem;
+    transition: all 0.2s;
+}
+
+.contactCard:hover {
+    background: white;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.cardIcon {
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+    display: block;
+}
+
+.contactCard h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.contactCard p {
+    font-size: 0.9rem;
+    color: var(--gray-600);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.formWrapper {
+    background: white;
+    border: 1px solid var(--gray-200);
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.form h2 {
+    margin-bottom: 1.5rem;
+}
+
+.formGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .formGrid {
+        grid-template-columns: 1fr;
+    }
+}

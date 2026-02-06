@@ -1,0 +1,160 @@
+.page {
+    padding-top: 80px;
+}
+
+.hero {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, var(--accent) 0%, #001845 100%);
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    color: rgba(255, 255, 255, 0.85);
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    font-size: 1.125rem;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.section {
+    padding: 5rem 0;
+}
+
+.sectionHeader {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.sectionHeader h2 {
+    margin-bottom: 1rem;
+}
+
+.sectionHeader p {
+    color: var(--gray-500);
+}
+
+.featuresGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.featureCard {
+    padding: 2rem;
+    background: white;
+    border: 1px solid var(--gray-100);
+    border-radius: 1rem;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.featureCard:hover {
+    border-color: var(--primary);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 40px rgba(207, 89, 6, 0.1);
+}
+
+.featureIcon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.featureCard h3 {
+    font-size: 1.125rem;
+    margin-bottom: 0.75rem;
+}
+
+.featureCard p {
+    font-size: 0.9rem;
+    color: var(--gray-500);
+    margin: 0;
+}
+
+.modesSection {
+    padding: 5rem 0;
+    background: var(--gray-50);
+}
+
+.modesSection h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.modesGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.modeCard {
+    padding: 2rem;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.modeCard h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: var(--primary);
+}
+
+.modeCard p {
+    font-size: 0.9rem;
+    color: var(--gray-600);
+    margin-bottom: 1rem;
+}
+
+.timing {
+    font-size: 0.8rem;
+    color: var(--gray-400);
+    font-weight: 500;
+}
+
+.ctaSection {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    text-align: center;
+    color: white;
+}
+
+.ctaSection h2 {
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.ctaButtons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 1024px) {
+
+    .featuresGrid,
+    .modesGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .featuresGrid,
+    .modesGrid {
+        grid-template-columns: 1fr;
+    }
+}
