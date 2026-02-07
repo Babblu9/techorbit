@@ -4,16 +4,18 @@
 
 .hero {
     padding: 4rem 0;
-    background: linear-gradient(135deg, #fff5eb 0%, #f0f7ff 100%);
+    background: linear-gradient(135deg, #002c6e 0%, #1a365d 100%);
     text-align: center;
+    color: white;
 }
 
 .hero h1 {
     margin-bottom: 1rem;
+    color: white;
 }
 
 .hero p {
-    color: var(--gray-500);
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .container {
@@ -24,6 +26,7 @@
 
 .content {
     padding: 5rem 0;
+    background: #f8fafc;
 }
 
 .grid {
@@ -34,10 +37,11 @@
 
 .info h2 {
     margin-bottom: 1rem;
+    color: #1e293b;
 }
 
 .info>p {
-    color: var(--gray-500);
+    color: #64748b;
     margin-bottom: 2rem;
 }
 
@@ -49,51 +53,103 @@
 
 .contactCard {
     padding: 1.5rem;
-    background: var(--gray-50);
+    background: white;
     border-radius: 1rem;
-    transition: all 0.2s;
+    transition: all 0.3s;
+    border: 1px solid #e2e8f0;
 }
 
 .contactCard:hover {
-    background: white;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(207, 89, 6, 0.12);
+    border-color: #cf5906;
 }
 
 .cardIcon {
-    font-size: 1.75rem;
-    margin-bottom: 0.75rem;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #cf5906 0%, #ffd036 100%);
+    border-radius: 12px;
+    color: white;
+    margin-bottom: 1rem;
 }
 
 .contactCard h3 {
-    font-size: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1e293b;
     margin-bottom: 0.5rem;
 }
 
 .contactCard p {
     font-size: 0.9rem;
-    color: var(--gray-600);
+    color: #64748b;
     margin: 0;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
+/* WhatsApp Form */
 .formWrapper {
     background: white;
-    border: 1px solid var(--gray-200);
+    border: 2px solid #e2e8f0;
     border-radius: 1.5rem;
     padding: 2.5rem;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+}
+
+.formHeader {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.whatsappIcon {
+    color: #25D366;
 }
 
 .form h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #1e293b;
+}
+
+.formDesc {
+    color: #64748b;
+    margin: 0 0 1.5rem;
+    font-size: 0.95rem;
+}
+
+.formFields {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     margin-bottom: 1.5rem;
 }
 
-.formGrid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    margin-bottom: 1rem;
+.whatsappBtn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px 28px;
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.whatsappBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
 }
 
 @media (max-width: 1024px) {
@@ -104,7 +160,15 @@
 }
 
 @media (max-width: 768px) {
-    .formGrid {
-        grid-template-columns: 1fr;
+    .hero {
+        padding: 3rem 0;
+    }
+
+    .content {
+        padding: 3rem 0;
+    }
+
+    .formWrapper {
+        padding: 1.5rem;
     }
 }

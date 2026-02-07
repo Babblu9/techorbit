@@ -60,7 +60,7 @@ export default function Header() {
                 { name: 'Full Stack Java', href: '/courses/fullstack-java' },
                 { name: 'Full Stack Python', href: '/courses/fullstack-python' },
                 { name: 'MERN Stack', href: '/courses/mern-stack' },
-                { name: 'React.js', href: '/courses/reactjs' },
+                { name: 'React.js', href: '/courses/react-js' },
                 { name: 'Angular', href: '/courses/angular' },
                 { name: 'Flutter Development', href: '/courses/flutter' }
             ]

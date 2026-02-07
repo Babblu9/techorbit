@@ -1,11 +1,16 @@
 'use client';
 import { useState } from 'react';
-import { Search, Briefcase, MapPin, Send, User, Phone, Mail, FileText, CheckCircle } from 'lucide-react';
+import {
+    Briefcase, MapPin, Send, User, Phone, Mail, FileText,
+    CheckCircle, Eye, X, Clock, IndianRupee, Building2
+} from 'lucide-react';
 import styles from './page.module.css';
 import { jobListings } from '@/data/jobListings';
 
 export default function ApplyJobsPage() {
     const [selectedJob, setSelectedJob] = useState(null);
+    const [viewingJob, setViewingJob] = useState(null);
+    const [showApplyForm, setShowApplyForm] = useState(false);
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -20,12 +25,21 @@ export default function ApplyJobsPage() {
     const handleSubmit = (e) => {
         e.preventDefault();
         setSubmitted(true);
-        // Reset after 3 seconds
         setTimeout(() => {
             setSubmitted(false);
+            setShowApplyForm(false);
             setSelectedJob(null);
             setFormData({ name: '', email: '', phone: '', experience: '', resume: null });
         }, 3000);
+    };
+
+    const handleViewJD = (job) => {
+        setViewingJob(job);
+    };
+
+    const handleApply = (job) => {
+        setSelectedJob(job);
+        setShowApplyForm(true);
     };
 
     return (
@@ -38,44 +52,134 @@ export default function ApplyJobsPage() {
 
             {/* Main Content */}
             <div className={styles.container}>
-                <div className={styles.layout}>
-                    {/* Jobs List */}
-                    <div className={styles.jobsList}>
-                        <h2 className={styles.sectionTitle}>
-                            <Briefcase size={20} />
-                            Open Positions ({openJobs.length})
-                        </h2>
-                        <div className={styles.jobsScroll}>
-                            {openJobs.map(job => (
-                                <div
-                                    key={job.id}
-                                    className={`${styles.jobItem} ${selectedJob?.id === job.id ? styles.active : ''}`}
-                                    onClick={() => setSelectedJob(job)}
-                                >
+                <div className={styles.jobsGrid}>
+                    {openJobs.map(job => (
+                        <div key={job.id} className={styles.jobCard}>
+                            <div className={styles.jobCardHeader}>
+                                <div className={styles.companyLogo}>
+                                    <Building2 size={24} />
+                                </div>
+                                <div className={styles.jobInfo}>
                                     <h3 className={styles.jobTitle}>{job.jobTitle}</h3>
                                     <p className={styles.companyName}>{job.companyName}</p>
-                                    <div className={styles.jobMeta}>
-                                        <span><MapPin size={14} /> {job.location}</span>
-                                        <span>{job.type}</span>
-                                    </div>
                                 </div>
-                            ))}
+                            </div>
+                            <div className={styles.jobDetails}>
+                                <span><MapPin size={14} /> {job.location}</span>
+                                <span><Clock size={14} /> {job.type}</span>
+                                <span><IndianRupee size={14} /> {job.salary || '4-8 LPA'}</span>
+                            </div>
+                            <div className={styles.jobSkills}>
+                                {(job.skills || ['React', 'Node.js', 'MongoDB']).slice(0, 3).map((skill, i) => (
+                                    <span key={i} className={styles.skill}>{skill}</span>
+                                ))}
+                            </div>
+                            <div className={styles.jobActions}>
+                                <button
+                                    className={styles.viewJdBtn}
+                                    onClick={() => handleViewJD(job)}
+                                >
+                                    <Eye size={16} /> View JD
+                                </button>
+                                <button
+                                    className={styles.applyBtn}
+                                    onClick={() => handleApply(job)}
+                                >
+                                    <Send size={16} /> Apply Now
+                                </button>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            {/* View JD Modal */}
+            {viewingJob && (
+                <div className={styles.modalOverlay} onClick={() => setViewingJob(null)}>
+                    <div className={styles.modal} onClick={e => e.stopPropagation()}>
+                        <button className={styles.closeBtn} onClick={() => setViewingJob(null)}>
+                            <X size={20} />
+                        </button>
+                        <div className={styles.modalHeader}>
+                            <Building2 size={32} className={styles.modalIcon} />
+                            <div>
+                                <h2>{viewingJob.jobTitle}</h2>
+                                <p>{viewingJob.companyName} • {viewingJob.location}</p>
+                            </div>
+                        </div>
+                        <div className={styles.modalBody}>
+                            <div className={styles.jdSection}>
+                                <h4>Job Type</h4>
+                                <p>{viewingJob.type}</p>
+                            </div>
+                            <div className={styles.jdSection}>
+                                <h4>Salary Range</h4>
+                                <p>{viewingJob.salary || '4 - 8 LPA'}</p>
+                            </div>
+                            <div className={styles.jdSection}>
+                                <h4>Job Description</h4>
+                                <p>{viewingJob.description || `We are looking for a talented ${viewingJob.jobTitle} to join our team at ${viewingJob.companyName}. You will be working on cutting-edge technologies and collaborating with cross-functional teams to deliver high-quality solutions.`}</p>
+                            </div>
+                            <div className={styles.jdSection}>
+                                <h4>Requirements</h4>
+                                <ul>
+                                    {(viewingJob.requirements || [
+                                        'Proficiency in relevant technologies',
+                                        'Strong problem-solving skills',
+                                        'Good communication skills',
+                                        'Team collaboration experience',
+                                        'Willingness to learn new technologies'
+                                    ]).map((req, i) => (
+                                        <li key={i}>{req}</li>
+                                    ))}
+                                </ul>
+                            </div>
+                            <div className={styles.jdSection}>
+                                <h4>Skills Required</h4>
+                                <div className={styles.skillsList}>
+                                    {(viewingJob.skills || ['React', 'Node.js', 'MongoDB', 'JavaScript', 'REST APIs']).map((skill, i) => (
+                                        <span key={i} className={styles.skillTag}>{skill}</span>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                        <div className={styles.modalFooter}>
+                            <button
+                                className={styles.applyBtnLarge}
+                                onClick={() => {
+                                    setViewingJob(null);
+                                    handleApply(viewingJob);
+                                }}
+                            >
+                                <Send size={18} /> Apply for this Position
+                            </button>
                         </div>
                     </div>
+                </div>
+            )}
 
-                    {/* Application Form */}
-                    <div className={styles.formSection}>
+            {/* Apply Form Modal */}
+            {showApplyForm && selectedJob && (
+                <div className={styles.modalOverlay} onClick={() => setShowApplyForm(false)}>
+                    <div className={styles.modal} onClick={e => e.stopPropagation()}>
+                        <button className={styles.closeBtn} onClick={() => setShowApplyForm(false)}>
+                            <X size={20} />
+                        </button>
+
                         {submitted ? (
                             <div className={styles.successMessage}>
-                                <CheckCircle size={48} />
+                                <CheckCircle size={56} />
                                 <h2>Application Submitted!</h2>
                                 <p>We'll get back to you within 2-3 business days.</p>
                             </div>
-                        ) : selectedJob ? (
+                        ) : (
                             <>
-                                <div className={styles.selectedJob}>
-                                    <h2>Applying for: {selectedJob.jobTitle}</h2>
-                                    <p>{selectedJob.companyName} • {selectedJob.location}</p>
+                                <div className={styles.modalHeader}>
+                                    <Briefcase size={32} className={styles.modalIcon} />
+                                    <div>
+                                        <h2>Apply for {selectedJob.jobTitle}</h2>
+                                        <p>{selectedJob.companyName} • {selectedJob.location}</p>
+                                    </div>
                                 </div>
                                 <form className={styles.form} onSubmit={handleSubmit}>
                                     <div className={styles.formGroup}>
@@ -136,16 +240,10 @@ export default function ApplyJobsPage() {
                                     </button>
                                 </form>
                             </>
-                        ) : (
-                            <div className={styles.placeholder}>
-                                <Briefcase size={48} />
-                                <h2>Select a Job</h2>
-                                <p>Choose a job from the list to apply</p>
-                            </div>
                         )}
                     </div>
                 </div>
-            </div>
+            )}
         </div>
     );
 }

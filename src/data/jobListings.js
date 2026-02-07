@@ -8,7 +8,11 @@ export const jobListings = [
         location: 'Hyderabad',
         postedBy: 'HR Team',
         datePosted: '2026-02-05',
-        type: 'Full Time'
+        type: 'Full Time',
+        salary: '4 - 6 LPA',
+        skills: ['Java', 'Spring Boot', 'MySQL', 'REST APIs'],
+        description: 'We are looking for a Junior Software Developer to join our team. You will be working on enterprise applications using Java and Spring Boot.',
+        requirements: ['B.Tech/BE in Computer Science or related field', 'Knowledge of Java and OOP concepts', 'Understanding of databases', 'Good problem-solving skills', 'Fresh graduates are welcome']
     },
     {
         id: 2,
@@ -19,7 +23,11 @@ export const jobListings = [
         location: 'Bangalore',
         postedBy: 'Recruitment',
         datePosted: '2026-02-04',
-        type: 'Full Time'
+        type: 'Full Time',
+        salary: '8 - 12 LPA',
+        skills: ['AWS', 'Docker', 'Kubernetes', 'Jenkins', 'Linux'],
+        description: 'Join our DevOps team to build and maintain CI/CD pipelines, manage cloud infrastructure, and ensure smooth deployments.',
+        requirements: ['2+ years experience in DevOps', 'Strong knowledge of AWS services', 'Experience with containerization', 'Scripting skills (Bash/Python)', 'Understanding of networking concepts']
     },
     {
         id: 3,
@@ -30,7 +38,11 @@ export const jobListings = [
         location: 'Hyderabad',
         postedBy: 'HR Team',
         datePosted: '2026-02-03',
-        type: 'Full Time'
+        type: 'Full Time',
+        salary: '5 - 8 LPA',
+        skills: ['Python', 'SQL', 'Power BI', 'Excel', 'Statistics'],
+        description: 'We need a Data Analyst to analyze business data, create visualizations, and provide actionable insights to stakeholders.',
+        requirements: ['Bachelor\'s degree in relevant field', 'Proficiency in SQL and Python', 'Experience with visualization tools', 'Strong analytical thinking', 'Good communication skills']
     },
     {
         id: 4,
@@ -41,7 +53,11 @@ export const jobListings = [
         location: 'Chennai',
         postedBy: 'Talent Acquisition',
         datePosted: '2026-02-02',
-        type: 'Full Time'
+        type: 'Full Time',
+        salary: '4 - 7 LPA',
+        skills: ['Selenium', 'Java', 'TestNG', 'JIRA', 'Agile'],
+        description: 'Looking for a QA Engineer to ensure quality of our software products through manual and automated testing.',
+        requirements: ['1+ years in software testing', 'Experience with Selenium WebDriver', 'Knowledge of testing methodologies', 'Bug tracking experience', 'Attention to detail']
     },
     {
         id: 5,
@@ -52,7 +68,11 @@ export const jobListings = [
         location: 'Hyderabad',
         postedBy: 'HR Team',
         datePosted: '2026-02-01',
-        type: 'Full Time'
+        type: 'Full Time',
+        salary: '8 - 15 LPA',
+        skills: ['React', 'Node.js', 'MongoDB', 'TypeScript', 'REST APIs'],
+        description: 'Join us as a Full Stack Developer to build modern web applications using the MERN stack.',
+        requirements: ['2+ years of full stack experience', 'Proficiency in React and Node.js', 'Database management skills', 'Understanding of REST APIs', 'Version control with Git']
     },
     {
         id: 6,
@@ -63,7 +83,11 @@ export const jobListings = [
         location: 'Pune',
         postedBy: 'Recruitment',
         datePosted: '2026-01-30',
-        type: 'Full Time'
+        type: 'Full Time',
+        salary: '6 - 10 LPA',
+        skills: ['Python', 'Django', 'FastAPI', 'PostgreSQL', 'Docker'],
+        description: 'We are hiring a Python Developer to work on AI/ML backend systems and APIs.',
+        requirements: ['2+ years Python experience', 'Knowledge of Django or FastAPI', 'Understanding of ML concepts is a plus', 'Database experience', 'Good coding practices']
     },
     {
         id: 7,
@@ -74,7 +98,11 @@ export const jobListings = [
         location: 'Hyderabad',
         postedBy: 'HR Team',
         datePosted: '2026-01-29',
-        type: 'Full Time'
+        type: 'Full Time',
+        salary: '5 - 9 LPA',
+        skills: ['React', 'Redux', 'JavaScript', 'CSS', 'REST APIs'],
+        description: 'Looking for a React Developer to build responsive and performant user interfaces.',
+        requirements: ['1+ years React experience', 'Strong JavaScript fundamentals', 'Experience with state management', 'CSS and responsive design', 'Team collaboration skills']
     },
     {
         id: 8,
@@ -85,7 +113,11 @@ export const jobListings = [
         location: 'Bangalore',
         postedBy: 'Talent Acquisition',
         datePosted: '2026-01-28',
-        type: 'Full Time'
+        type: 'Full Time',
+        salary: '15 - 25 LPA',
+        skills: ['AWS', 'Terraform', 'CloudFormation', 'Security', 'Networking'],
+        description: 'Senior position for designing and implementing AWS cloud solutions.',
+        requirements: ['5+ years cloud experience', 'AWS Solutions Architect certification', 'Infrastructure as Code experience', 'Security best practices', 'Leadership skills']
     },
     {
         id: 9,
@@ -96,7 +128,11 @@ export const jobListings = [
         location: 'Hyderabad',
         postedBy: 'HR Team',
         datePosted: '2026-01-27',
-        type: 'Full Time'
+        type: 'Full Time',
+        salary: '4 - 6 LPA',
+        skills: ['Selenium', 'Python', 'TestNG', 'Cucumber', 'CI/CD'],
+        description: 'Join our QA team to automate testing for web applications using Selenium.',
+        requirements: ['Experience with Selenium automation', 'Programming skills (Java/Python)', 'Understanding of testing frameworks', 'Agile methodology knowledge', 'Good documentation skills']
     },
     {
         id: 10,
@@ -107,7 +143,11 @@ export const jobListings = [
         location: 'Mumbai',
         postedBy: 'Recruitment',
         datePosted: '2026-01-26',
-        type: 'Full Time'
+        type: 'Full Time',
+        salary: '7 - 12 LPA',
+        skills: ['Java', 'Spring Boot', 'Microservices', 'Kafka', 'Oracle'],
+        description: 'We need an experienced Java Developer for our enterprise banking applications.',
+        requirements: ['3+ years Java experience', 'Spring Boot and microservices', 'Database optimization skills', 'Understanding of banking domain is a plus', 'Problem-solving abilities']
     },
     {
         id: 11,
@@ -118,7 +158,11 @@ export const jobListings = [
         location: 'Hyderabad',
         postedBy: 'HR Team',
         datePosted: '2026-01-25',
-        type: 'Internship'
+        type: 'Internship',
+        salary: '15K - 20K/month',
+        skills: ['HTML', 'CSS', 'JavaScript', 'React Basics', 'Git'],
+        description: 'Great opportunity for freshers to learn frontend development while working on real projects.',
+        requirements: ['Pursuing or completed B.Tech', 'Basic HTML/CSS/JavaScript knowledge', 'Eagerness to learn', 'Available for 6 months', 'Good communication skills']
     },
     {
         id: 12,
@@ -129,6 +173,10 @@ export const jobListings = [
         location: 'Bangalore',
         postedBy: 'Talent Acquisition',
         datePosted: '2026-01-24',
-        type: 'Internship'
+        type: 'Internship',
+        salary: '20K - 25K/month',
+        skills: ['Python', 'Machine Learning', 'Pandas', 'NumPy', 'Statistics'],
+        description: 'Internship opportunity to work on real-world data science and machine learning projects.',
+        requirements: ['Pursuing Masters or B.Tech in relevant field', 'Python programming skills', 'Basic ML knowledge', 'Statistical analysis understanding', 'Available for 6 months']
     }
 ];
