@@ -1,0 +1,342 @@
+.page {
+    padding-top: 80px;
+    background-color: #f8fafc;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #020617 0%, #1e293b 100%);
+    padding: 80px 0;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.heroContent {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    padding: 0 20px;
+}
+
+.heroTitle {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, #ffffff, #94a3b8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.heroSubtitle {
+    font-size: 1.25rem;
+    color: #cbd5e1;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.heroBtns {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.primaryBtn {
+    background: #f97316;
+    color: white;
+    padding: 14px 32px;
+    border-radius: 8px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.primaryBtn:hover {
+    background: #ea580c;
+    transform: translateY(-2px);
+}
+
+.secondaryBtn {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 14px 32px;
+    border-radius: 8px;
+    font-weight: 700;
+    text-decoration: none;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.secondaryBtn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Sections Common */
+.section {
+    padding: 80px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.sectionTitle {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #1e293b;
+    font-weight: 800;
+    margin-bottom: 60px;
+}
+
+.sectionTitle span {
+    color: #f97316;
+}
+
+/* Benefits Grid */
+.benefitsGrid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.benefitCard {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+    border: 1px solid #e2e8f0;
+    transition: transform 0.3s;
+}
+
+.benefitCard:hover {
+    transform: translateY(-10px);
+    border-color: #f97316;
+}
+
+.iconWrapper {
+    width: 80px;
+    height: 80px;
+    background: #fff7ed;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: #f97316;
+}
+
+.benefitTitle {
+    font-size: 1.5rem;
+    color: #1e293b;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.benefitDesc {
+    color: #64748b;
+    line-height: 1.6;
+}
+
+/* Requirements & Terms */
+.twoColGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.contentBlock {
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    border-left: 5px solid #0ea5e9;
+}
+
+.contentBlock.warning {
+    border-left-color: #f97316;
+}
+
+.blockTitle {
+    font-size: 1.75rem;
+    margin-bottom: 25px;
+    color: #0f172a;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+}
+
+.list li {
+    margin-bottom: 15px;
+    padding-left: 25px;
+    position: relative;
+    color: #475569;
+    line-height: 1.6;
+}
+
+.list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #0ea5e9;
+    font-weight: 800;
+}
+
+.list.warning li::before {
+    content: "⚠";
+    color: #f97316;
+}
+
+/* Fee Structure */
+.feeSection {
+    background: white;
+}
+
+.feeTableWrapper {
+    overflow-x: auto;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.feeTable {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+.feeTable th,
+.feeTable td {
+    padding: 20px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.feeTable th {
+    background: #f8fafc;
+    color: #1e293b;
+    font-weight: 700;
+}
+
+.feeTable td {
+    color: #475569;
+}
+
+.feeTable tr:last-child td {
+    border-bottom: none;
+}
+
+.highlightCell {
+    color: #f97316;
+    font-weight: 700;
+}
+
+/* Form Section */
+.formSection {
+    background: #0f172a;
+    padding: 80px 0;
+    color: white;
+}
+
+.formContainer {
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.formTitle {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: white;
+    /* Force white color to override global h2 style */
+}
+
+.inputGroup {
+    margin-bottom: 20px;
+}
+
+.input {
+    width: 100%;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s;
+}
+
+.input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.input:focus {
+    border-color: #f97316;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.submitBtn {
+    width: 100%;
+    padding: 15px;
+    background: #f97316;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.submitBtn:hover {
+    background: #ea580c;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .heroTitle {
+        font-size: 2.5rem;
+    }
+
+    .heroBtns {
+        flex-direction: column;
+    }
+
+    .benefitsGrid {
+        flex-direction: column;
+    }
+
+    .twoColGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .formContainer {
+        padding: 20px;
+    }
+}

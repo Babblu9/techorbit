@@ -1,8 +1,17 @@
 'use client';
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
+import {
+    Brain, Code2, Cloud, FlaskConical, Shield, BarChart3,
+    Clock, MapPin, Search, ArrowRight
+} from 'lucide-react';
 import { courses, courseCategories } from '@/data/courses';
 import styles from './page.module.css';
+
+// Icon mapping for categories
+const iconMap = {
+    Brain, Code2, Cloud, FlaskConical, Shield, BarChart3
+};
 
 export default function CoursesPage() {
     const [activeCategory, setActiveCategory] = useState('all');
@@ -16,6 +25,11 @@ export default function CoursesPage() {
             return matchesCategory && matchesSearch;
         });
     }, [activeCategory, searchQuery]);
+
+    const getIcon = (iconName) => {
+        const IconComponent = iconMap[iconName];
+        return IconComponent ? <IconComponent size={16} /> : null;
+    };
 
     return (
         <div className={styles.page}>
@@ -44,17 +58,20 @@ export default function CoursesPage() {
                                     className={`${styles.catBtn} ${activeCategory === cat.id ? styles.active : ''}`}
                                     onClick={() => setActiveCategory(cat.id)}
                                 >
-                                    {cat.icon} {cat.name}
+                                    {getIcon(cat.iconName)} {cat.name}
                                 </button>
                             ))}
                         </div>
-                        <input
-                            type="search"
-                            placeholder="Search courses..."
-                            value={searchQuery}
-                            onChange={(e) => setSearchQuery(e.target.value)}
-                            className={styles.search}
-                        />
+                        <div className={styles.searchWrapper}>
+                            <Search size={18} className={styles.searchIcon} />
+                            <input
+                                type="search"
+                                placeholder="Search courses..."
+                                value={searchQuery}
+                                onChange={(e) => setSearchQuery(e.target.value)}
+                                className={styles.search}
+                            />
+                        </div>
                     </div>
                 </div>
             </section>
@@ -75,8 +92,8 @@ export default function CoursesPage() {
                                 <h3 className={styles.cardTitle}>{course.title}</h3>
                                 <p className={styles.cardDesc}>{course.shortDescription}</p>
                                 <div className={styles.cardMeta}>
-                                    <span>🕐 {course.duration}</span>
-                                    <span>📍 {course.mode}</span>
+                                    <span><Clock size={14} /> {course.duration}</span>
+                                    <span><MapPin size={14} /> {course.mode}</span>
                                 </div>
                                 <div className={styles.cardTools}>
                                     {course.tools.slice(0, 4).map((tool, i) => (
@@ -85,7 +102,9 @@ export default function CoursesPage() {
                                     {course.tools.length > 4 && <span className={styles.tool}>+{course.tools.length - 4}</span>}
                                 </div>
                                 <div className={styles.cardFooter}>
-                                    <span className={styles.viewDetails}>View Details →</span>
+                                    <span className={styles.viewDetails}>
+                                        View Details <ArrowRight size={14} />
+                                    </span>
                                 </div>
                             </Link>
                         ))}
@@ -95,3 +114,4 @@ export default function CoursesPage() {
         </div>
     );
 }
+

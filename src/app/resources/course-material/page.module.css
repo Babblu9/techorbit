@@ -1,0 +1,234 @@
+.pageWrapper {
+    padding-top: 80px;
+    min-height: 100vh;
+    background-color: #f8fafc;
+}
+
+/* Hero Section - Dark Blue with Decorative Curves */
+.hero {
+    background: linear-gradient(135deg, #0a1628 0%, #1a365d 50%, #0a1628 100%);
+    padding: 80px 0;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative curved lines */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -10%;
+    right: 0;
+    bottom: 0;
+    background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Cpath d='M-100 300 Q 150 100 400 300 T 900 300' fill='none' stroke='rgba(100,150,200,0.15)' stroke-width='2'/%3E%3Cpath d='M-100 350 Q 150 150 400 350 T 900 350' fill='none' stroke='rgba(100,150,200,0.12)' stroke-width='2'/%3E%3Cpath d='M-100 250 Q 150 50 400 250 T 900 250' fill='none' stroke='rgba(100,150,200,0.1)' stroke-width='2'/%3E%3C/svg%3E");
+    background-size: cover;
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        radial-gradient(circle at 5% 50%, rgba(59, 130, 246, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 95% 50%, rgba(59, 130, 246, 0.08) 0%, transparent 40%);
+    pointer-events: none;
+}
+
+.title {
+    font-size: 2.75rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* Container */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+/* Table Container */
+.tableContainer {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+}
+
+/* Table Styles */
+.tableWrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    padding: 18px 24px;
+    text-align: left;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.table th {
+    background-color: #f8fafc;
+    color: #374151;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+.table th:first-child {
+    width: 120px;
+    text-align: center;
+}
+
+.table th:last-child {
+    width: 150px;
+    text-align: center;
+}
+
+.table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #fafbfc;
+}
+
+.table tbody tr:hover {
+    background-color: #f1f5f9;
+}
+
+.table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Serial Number Column */
+.serialNo {
+    text-align: center;
+    color: #6b7280;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+/* Topic Column */
+.topicCell {
+    font-weight: 500;
+    color: #1f2937;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Action Column - Read More Link */
+.actionCell {
+    text-align: center;
+}
+
+.readMoreLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 18px;
+    color: #3b82f6;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border-radius: 4px;
+}
+
+.readMoreLink:hover {
+    color: #1d4ed8;
+    background-color: rgba(59, 130, 246, 0.08);
+}
+
+/* Resource count badge */
+.resourceBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #0a1628 0%, #1a365d 100%);
+    color: white;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 24px;
+}
+
+.resourceBadge svg {
+    opacity: 0.9;
+}
+
+/* No Results */
+.noResults {
+    text-align: center;
+    padding: 60px 20px;
+    color: #6b7280;
+    font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero {
+        padding: 50px 0;
+    }
+
+    .title {
+        font-size: 1.75rem;
+        padding: 0 20px;
+    }
+
+    .container {
+        padding: 30px 15px;
+    }
+
+    .table th,
+    .table td {
+        padding: 14px 16px;
+    }
+
+    .table th:first-child,
+    .table td:first-child {
+        width: 80px;
+    }
+
+    .topicCell {
+        font-size: 0.95rem;
+    }
+
+    .readMoreLink {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .table th:last-child,
+    .table td:last-child {
+        width: auto;
+    }
+
+    .readMoreLink span {
+        display: none;
+    }
+}

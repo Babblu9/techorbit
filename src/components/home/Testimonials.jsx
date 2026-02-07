@@ -104,9 +104,14 @@ export default function Testimonials() {
                 <div className={styles.companies}>
                     <p className={styles.companiesLabel}>Our students work at:</p>
                     <div className={styles.logos}>
-                        {['Google', 'Amazon', 'Microsoft', 'Meta', 'Apple', 'Netflix', 'Uber', 'Salesforce'].map((company) => (
-                            <span key={company} className={styles.logo}>{company}</span>
-                        ))}
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" className={styles.companyLogo} />
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon" className={styles.companyLogo} />
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg" alt="Microsoft" className={styles.companyLogo} />
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Meta_Platforms_Inc._logo.svg" alt="Meta" className={styles.companyLogo} />
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple" className={styles.companyLogo} />
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix" className={styles.companyLogo} />
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Uber_logo_2018.png" alt="Uber" className={styles.companyLogo} />
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Salesforce.com_logo.svg" alt="Salesforce" className={styles.companyLogo} />
                     </div>
                 </div>
             </div>

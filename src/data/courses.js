@@ -3,42 +3,42 @@ export const courseCategories = [
   {
     id: 'next-gen',
     name: 'Next Gen Technologies',
-    icon: '🤖',
+    iconName: 'Brain',
     description: 'Master cutting-edge AI and data technologies',
     courses: ['data-science', 'artificial-intelligence', 'generative-ai', 'machine-learning']
   },
   {
     id: 'fullstack',
     name: 'Full Stack Development',
-    icon: '💻',
+    iconName: 'Code2',
     description: 'Build modern web applications end-to-end',
     courses: ['fullstack-java', 'fullstack-python', 'mern-stack', 'react-js']
   },
   {
     id: 'cloud-devops',
     name: 'Cloud & DevOps',
-    icon: '☁️',
+    iconName: 'Cloud',
     description: 'Deploy and manage cloud infrastructure',
     courses: ['aws', 'azure', 'gcp', 'devops', 'data-engineering']
   },
   {
     id: 'testing',
     name: 'Software Testing',
-    icon: '🧪',
+    iconName: 'FlaskConical',
     description: 'Ensure quality with comprehensive testing',
     courses: ['manual-testing', 'automation-testing', 'selenium', 'playwright']
   },
   {
     id: 'security',
     name: 'Cyber Security',
-    icon: '🔒',
+    iconName: 'Shield',
     description: 'Protect systems from digital threats',
     courses: ['ethical-hacking', 'soc-analyst']
   },
   {
     id: 'analytics',
     name: 'Business & Analytics',
-    icon: '📊',
+    iconName: 'BarChart3',
     description: 'Transform data into business insights',
     courses: ['business-analyst', 'power-bi', 'tableau']
   }
@@ -405,10 +405,10 @@ export const testimonials = [
 ];
 
 export const trustMetrics = [
-  { value: '10+', label: 'Years Experience', icon: '🏆' },
-  { value: '25,000+', label: 'Students Trained', icon: '👨‍🎓' },
-  { value: '50+', label: 'Expert Mentors', icon: '👨‍🏫' },
-  { value: '95%', label: 'Placement Rate', icon: '💼' }
+  { value: '10+', label: 'Years Experience', iconName: 'Trophy' },
+  { value: '25,000+', label: 'Students Trained', iconName: 'GraduationCap' },
+  { value: '50+', label: 'Expert Mentors', iconName: 'Users' },
+  { value: '95%', label: 'Placement Rate', iconName: 'Briefcase' }
 ];
 
 export const trainingModes = [
@@ -416,30 +416,30 @@ export const trainingModes = [
     id: 'online',
     title: 'Online Training',
     description: 'Learn from anywhere with live interactive sessions, recorded content, and 24/7 access to materials.',
-    icon: '🌐',
+    iconName: 'Globe',
     features: ['Live classes', 'Recorded sessions', 'Flexible timing', '24/7 support']
   },
   {
     id: 'classroom',
     title: 'Classroom Training',
     description: 'Immersive in-person learning experience with hands-on labs and face-to-face mentorship.',
-    icon: '🏛️',
+    iconName: 'School',
     features: ['Face-to-face learning', 'Lab access', 'Peer networking', 'Direct mentorship']
   },
   {
     id: 'corporate',
     title: 'Corporate Training',
     description: 'Customized training programs for organizations to upskill their workforce.',
-    icon: '🏢',
+    iconName: 'Building2',
     features: ['Custom curriculum', 'On-site/remote', 'Team training', 'Progress tracking']
   }
 ];
 
 export const whyChooseUs = [
-  { title: 'Industry-Aligned Curriculum', description: 'Courses designed with input from industry experts and updated regularly.', icon: '📚' },
-  { title: 'Real-Time Projects', description: 'Work on actual business problems and build a portfolio that stands out.', icon: '🔧' },
-  { title: 'Expert Mentorship', description: 'Learn from professionals with 10+ years of industry experience.', icon: '👨‍💼' },
-  { title: 'Resume & Interview Prep', description: 'Dedicated sessions to craft winning resumes and ace interviews.', icon: '📝' },
-  { title: 'Flexible Learning', description: 'Choose between online, classroom, or weekend batches.', icon: '⏰' },
-  { title: 'Placement Assistance', description: '95% placement rate with top IT companies and startups.', icon: '🎯' }
+  { title: 'Industry-Aligned Curriculum', description: 'Courses designed with input from industry experts and updated regularly.', iconName: 'BookOpen' },
+  { title: 'Real-Time Projects', description: 'Work on actual business problems and build a portfolio that stands out.', iconName: 'Wrench' },
+  { title: 'Expert Mentorship', description: 'Learn from professionals with 10+ years of industry experience.', iconName: 'UserCheck' },
+  { title: 'Resume & Interview Prep', description: 'Dedicated sessions to craft winning resumes and ace interviews.', iconName: 'FileText' },
+  { title: 'Flexible Learning', description: 'Choose between online, classroom, or weekend batches.', iconName: 'Clock' },
+  { title: 'Placement Assistance', description: '95% placement rate with top IT companies and startups.', iconName: 'Target' }
 ];

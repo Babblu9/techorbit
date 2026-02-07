@@ -22,13 +22,20 @@ export default function Footer() {
                     <div className={styles.brandColumn}>
                         <Link href="/" className={styles.logo}>
                             <Image
-                                src="/images/logo.png"
-                                alt="Techorbit Knowledge Centre"
-                                width={110}
-                                height={35}
+                                src="/images/logo-icon.png"
+                                alt="Techorbit Logo"
+                                width={50}
+                                height={50}
                                 className={styles.logoImage}
                                 unoptimized
                             />
+                            <div className={styles.logoTextContainer}>
+                                <span className={styles.brandName}>
+                                    <span>TECH</span>
+                                    <span className={styles.brandAccent}>ORBIT</span>
+                                </span>
+                                <span className={styles.brandTagline}>KNOWLEDGE CENTRE</span>
+                            </div>
                         </Link>
                         <p className={styles.tagline}>
                             Empowering careers through industry-ready IT training. Transform your future with expert-led courses and hands-on projects.
@@ -76,15 +83,15 @@ export default function Footer() {
                         <div className={styles.contactInfo}>
                             <div className={styles.contactItem}>
                                 <span className={styles.contactIcon}><MapPin size={16} /></span>
-                                <span>Hitech City, Hyderabad, Telangana, India - 500081</span>
+                                <span>Unit no.201, 2nd floor, Siri plaza, KPHB, Hyderabad-500072</span>
                             </div>
                             <div className={styles.contactItem}>
                                 <span className={styles.contactIcon}><Phone size={16} /></span>
-                                <span>+91 98765 43210</span>
+                                <span>+91 91774 77855</span>
                             </div>
                             <div className={styles.contactItem}>
                                 <span className={styles.contactIcon}><Mail size={16} /></span>
-                                <span>info@techorbit.in</span>
+                                <span>info@techorbitindia.com</span>
                             </div>
                             <div className={styles.contactItem}>
                                 <span className={styles.contactIcon}><Clock size={16} /></span>

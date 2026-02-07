@@ -170,32 +170,37 @@
 /* Company Logos */
 .companies {
     text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #e9ecef;
 }
 
 .companiesLabel {
     font-size: 0.875rem;
     color: #6c757d;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .logos {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1.5rem;
+    align-items: center;
+    gap: 2.5rem;
 }
 
-.logo {
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: #adb5bd;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    transition: color 0.3s ease;
+.companyLogo {
+    height: 28px;
+    width: auto;
+    max-width: 100px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: all 0.3s ease;
 }
 
-.logo:hover {
-    color: #0E1A4D;
+.companyLogo:hover {
+    filter: grayscale(0%);
+    opacity: 1;
 }
 
 /* Responsive */

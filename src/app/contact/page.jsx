@@ -34,21 +34,21 @@ export default function ContactPage() {
                                         <MapPin size={24} />
                                     </span>
                                     <h3>Visit Us</h3>
-                                    <p>Techorbit Training Center<br />4th Floor, Cyber Towers<br />Hitech City, Hyderabad - 500081</p>
+                                    <p>Techorbit Training Center<br />Unit no.201, 2nd floor, Siri plaza,<br />KPHB, Hyderabad-500072</p>
                                 </div>
                                 <div className={styles.contactCard}>
                                     <span className={styles.cardIcon}>
                                         <Phone size={24} />
                                     </span>
                                     <h3>Call Us</h3>
-                                    <p>+91 98765 43210<br />+91 87654 32109<br />Mon - Sat: 9 AM - 8 PM</p>
+                                    <p>+91 91774 77855<br />Mon - Sat: 9 AM - 8 PM</p>
                                 </div>
                                 <div className={styles.contactCard}>
                                     <span className={styles.cardIcon}>
                                         <Mail size={24} />
                                     </span>
                                     <h3>Email Us</h3>
-                                    <p>info@techorbit.in<br />admissions@techorbit.in<br />support@techorbit.in</p>
+                                    <p>info@techorbitindia.com<br />admissions@techorbitindia.com<br />support@techorbitindia.com</p>
                                 </div>
                             </div>
                         </div>

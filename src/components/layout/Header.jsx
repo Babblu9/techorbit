@@ -158,8 +158,6 @@ export default function Header() {
 
     // Resources dropdown items
     const resources = [
-        { name: 'LMS', href: '/lms' },
-        { name: 'Sethu-AI', href: '/sethu-ai' },
         { name: 'Interview Questions', href: '/resources/interview-questions' },
         { name: 'Course Material', href: '/resources/course-material' },
         { name: 'Video Lectures', href: '/resources/video-lectures' }
@@ -172,15 +170,7 @@ export default function Header() {
             name: 'UpSkilling',
             hasSubmenu: true,
             items: [
-                { name: 'Ameerpet', href: '/entities/ameerpet' },
-                { name: 'Madhapur', href: '/entities/madhapur' }
-            ]
-        },
-        {
-            id: 'engineering',
-            name: 'Engineering',
-            hasSubmenu: true,
-            items: [
+                { name: 'Kukatpally', href: '/entities/kukatpally' },
                 { name: 'USA', href: '/entities/usa' }
             ]
         }

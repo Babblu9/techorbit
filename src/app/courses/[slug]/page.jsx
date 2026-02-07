@@ -2,6 +2,10 @@
 import { useState, use } from 'react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import {
+    Clock, MapPin, BarChart3, Check, Briefcase,
+    ChevronDown, ChevronUp, ArrowRight
+} from 'lucide-react';
 import { courses } from '@/data/courses';
 import styles from './page.module.css';
 
@@ -27,12 +31,14 @@ export default function CourseDetailPage({ params }) {
                         <h1>{course.title}</h1>
                         <p className={styles.description}>{course.description}</p>
                         <div className={styles.meta}>
-                            <span>🕐 {course.duration}</span>
-                            <span>📍 {course.mode}</span>
-                            <span>📊 {course.level}</span>
+                            <span><Clock size={16} /> {course.duration}</span>
+                            <span><MapPin size={16} /> {course.mode}</span>
+                            <span><BarChart3 size={16} /> {course.level}</span>
                         </div>
                         <div className={styles.ctas}>
-                            <Link href="/free-demo" className="btn btn-primary btn-lg">Enroll Now</Link>
+                            <Link href="/free-demo" className="btn btn-primary btn-lg">
+                                Enroll Now <ArrowRight size={16} />
+                            </Link>
                             <Link href="/contact" className="btn btn-outline btn-lg">Request Callback</Link>
                         </div>
                     </div>
@@ -50,7 +56,9 @@ export default function CourseDetailPage({ params }) {
                                 <h2>Course Highlights</h2>
                                 <div className={styles.highlights}>
                                     {course.highlights.map((h, i) => (
-                                        <div key={i} className={styles.highlight}>✓ {h}</div>
+                                        <div key={i} className={styles.highlight}>
+                                            <Check size={16} className={styles.checkIcon} /> {h}
+                                        </div>
                                     ))}
                                 </div>
                             </div>
@@ -66,7 +74,9 @@ export default function CourseDetailPage({ params }) {
                                                 onClick={() => setOpenModule(openModule === i ? -1 : i)}
                                             >
                                                 <span>Module {i + 1}: {mod.title}</span>
-                                                <span className={styles.arrow}>{openModule === i ? '−' : '+'}</span>
+                                                <span className={styles.arrow}>
+                                                    {openModule === i ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
+                                                </span>
                                             </button>
                                             {openModule === i && (
                                                 <div className={styles.moduleContent}>
@@ -98,7 +108,7 @@ export default function CourseDetailPage({ params }) {
                                 <div className={styles.outcomes}>
                                     {course.outcomes.map((outcome, i) => (
                                         <div key={i} className={styles.outcome}>
-                                            <span className={styles.outcomeIcon}>💼</span>
+                                            <Briefcase size={18} className={styles.outcomeIcon} />
                                             <span>{outcome}</span>
                                         </div>
                                     ))}
@@ -132,3 +142,4 @@ export default function CourseDetailPage({ params }) {
         </div>
     );
 }
+
