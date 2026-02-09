@@ -50,8 +50,7 @@ export default function Header() {
     // Resources dropdown items
     const resources = [
         { name: 'Interview Questions', href: '/resources/interview-questions' },
-        { name: 'Course Material', href: '/resources/course-material' },
-        { name: 'Video Lectures', href: '/resources/video-lectures' }
+        { name: 'Course Material', href: '/resources/course-material' }
     ];
 
     // Our Entities dropdown with nested items
