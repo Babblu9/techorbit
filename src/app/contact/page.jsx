@@ -10,7 +10,7 @@ export default function ContactPage() {
         e.preventDefault();
 
         // WhatsApp number with country code (India +91)
-        const whatsappNumber = '918688664337';
+        const whatsappNumber = '919177477855';
 
         // Get the reason (use custom if "Other" selected)
         const finalReason = formData.reason === 'Other' ? formData.customReason : formData.reason;
@@ -50,21 +50,21 @@ Reason: ${finalReason}`;
                                         <MapPin size={24} />
                                     </span>
                                     <h3>Visit Us</h3>
-                                    <p>Techorbit Training Center<br />Unit no.201, 2nd floor, Siri plaza,<br />KPHB, Hyderabad-500072</p>
+                                    <p>Tech Orbit Knowledge Centre<br />KPHB, Hyderabad</p>
                                 </div>
                                 <div className={styles.contactCard}>
                                     <span className={styles.cardIcon}>
                                         <Phone size={24} />
                                     </span>
                                     <h3>Call Us</h3>
-                                    <p>+91 86886 64337<br />Mon - Sat: 9 AM - 8 PM</p>
+                                    <p>+91 9177477855<br />Mon - Sat: 9 AM - 8 PM</p>
                                 </div>
                                 <div className={styles.contactCard}>
                                     <span className={styles.cardIcon}>
                                         <Mail size={24} />
                                     </span>
                                     <h3>Email Us</h3>
-                                    <p>info@techorbitindia.com<br />admissions@techorbitindia.com</p>
+                                    <p>admissions@thetechorbit.in</p>
                                 </div>
                             </div>
                         </div>

@@ -83,15 +83,15 @@ export default function Footer() {
                         <div className={styles.contactInfo}>
                             <div className={styles.contactItem}>
                                 <span className={styles.contactIcon}><MapPin size={16} /></span>
-                                <span>Unit no.201, 2nd floor, Siri plaza, KPHB, Hyderabad-500072</span>
+                                <span>Tech Orbit Knowledge Centre, KPHB, Hyderabad</span>
                             </div>
                             <div className={styles.contactItem}>
                                 <span className={styles.contactIcon}><Phone size={16} /></span>
-                                <span>+91 91774 77855</span>
+                                <span>+91 9177477855</span>
                             </div>
                             <div className={styles.contactItem}>
                                 <span className={styles.contactIcon}><Mail size={16} /></span>
-                                <span>info@techorbitindia.com</span>
+                                <span>admissions@thetechorbit.in</span>
                             </div>
                             <div className={styles.contactItem}>
                                 <span className={styles.contactIcon}><Clock size={16} /></span>

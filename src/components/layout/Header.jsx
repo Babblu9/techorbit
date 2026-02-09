@@ -36,124 +36,15 @@ export default function Header() {
         setActiveSubmenu(submenu);
     };
 
-    // Course categories configuration
+    // Course categories configuration - Updated to show only 6 core courses
     const courseCategories = [
-        { id: 'quantum', name: 'Quantum Computing', hasSubmenu: false, href: '/courses?category=quantum' },
-        { id: 'genai', name: 'Gen AI', hasSubmenu: false, href: '/courses?category=genai' },
-        {
-            id: 'data-science',
-            name: 'Data Science & Analytics',
-            hasSubmenu: true,
-            courses: [
-                { name: 'Data Science', href: '/courses/data-science' },
-                { name: 'Machine Learning', href: '/courses/machine-learning' },
-                { name: 'Data Analytics', href: '/courses/data-analytics' },
-                { name: 'Business Intelligence', href: '/courses/business-intelligence' },
-                { name: 'Python for Data Science', href: '/courses/python-data-science' }
-            ]
-        },
-        {
-            id: 'web-dev',
-            name: 'Web & App Development',
-            hasSubmenu: true,
-            courses: [
-                { name: 'Full Stack Java', href: '/courses/fullstack-java' },
-                { name: 'Full Stack Python', href: '/courses/fullstack-python' },
-                { name: 'MERN Stack', href: '/courses/mern-stack' },
-                { name: 'React.js', href: '/courses/react-js' },
-                { name: 'Angular', href: '/courses/angular' },
-                { name: 'Flutter Development', href: '/courses/flutter' }
-            ]
-        },
-        {
-            id: 'cloud-data',
-            name: 'Cloud & Data Engineering',
-            hasSubmenu: true,
-            courses: [
-                { name: 'AWS', href: '/courses/aws' },
-                { name: 'Azure', href: '/courses/azure' },
-                { name: 'Google Cloud', href: '/courses/gcp' },
-                { name: 'Snowflake', href: '/courses/snowflake' },
-                { name: 'Databricks', href: '/courses/databricks' }
-            ]
-        },
-        {
-            id: 'testing',
-            name: 'Software Testing',
-            hasSubmenu: true,
-            courses: [
-                { name: 'Selenium', href: '/courses/selenium' },
-                { name: 'Manual Testing', href: '/courses/manual-testing' },
-                { name: 'API Testing', href: '/courses/api-testing' },
-                { name: 'Performance Testing', href: '/courses/performance-testing' }
-            ]
-        },
-        {
-            id: 'devops',
-            name: 'DevOps & Cloud Infrastructure',
-            hasSubmenu: true,
-            courses: [
-                { name: 'DevOps', href: '/courses/devops' },
-                { name: 'Kubernetes', href: '/courses/kubernetes' },
-                { name: 'Docker', href: '/courses/docker' },
-                { name: 'Terraform', href: '/courses/terraform' },
-                { name: 'Jenkins', href: '/courses/jenkins' }
-            ]
-        },
-        {
-            id: 'cybersecurity',
-            name: 'Cybersecurity & Networking',
-            hasSubmenu: true,
-            courses: [
-                { name: 'Ethical Hacking', href: '/courses/ethical-hacking' },
-                { name: 'Network Security', href: '/courses/network-security' },
-                { name: 'CCNA', href: '/courses/ccna' },
-                { name: 'CompTIA Security+', href: '/courses/comptia-security' }
-            ]
-        },
-        { id: 'uiux', name: 'UI UX', hasSubmenu: false, href: '/courses?category=uiux' },
-        { id: 'digital-marketing', name: 'Digital Marketing', hasSubmenu: false, href: '/courses?category=digital-marketing' },
-        {
-            id: 'multimedia',
-            name: 'Multimedia & Video',
-            hasSubmenu: true,
-            courses: [
-                { name: 'Video Editing', href: '/courses/video-editing' },
-                { name: 'Motion Graphics', href: '/courses/motion-graphics' },
-                { name: 'Graphic Design', href: '/courses/graphic-design' }
-            ]
-        },
-        {
-            id: 'medical',
-            name: 'Medical & Clinical Skills',
-            hasSubmenu: true,
-            courses: [
-                { name: 'Medical Coding', href: '/courses/medical-coding' },
-                { name: 'Clinical Data Management', href: '/courses/clinical-data' },
-                { name: 'Healthcare Analytics', href: '/courses/healthcare-analytics' }
-            ]
-        },
-        {
-            id: 'agile',
-            name: 'Agile & Project Management',
-            hasSubmenu: true,
-            courses: [
-                { name: 'PMP Certification', href: '/courses/pmp' },
-                { name: 'Scrum Master', href: '/courses/scrum-master' },
-                { name: 'Agile Fundamentals', href: '/courses/agile' }
-            ]
-        },
-        {
-            id: 'more',
-            name: 'More Courses',
-            hasSubmenu: true,
-            courses: [
-                { name: 'SAP', href: '/courses/sap' },
-                { name: 'Salesforce', href: '/courses/salesforce' },
-                { name: 'ServiceNow', href: '/courses/servicenow' },
-                { name: 'View All Courses', href: '/courses' }
-            ]
-        }
+        { id: 'ai-ml', name: 'AI & Machine Learning', hasSubmenu: false, href: '/courses/ai-ml' },
+        { id: 'fullstack-ai', name: 'Full Stack AI', hasSubmenu: false, href: '/courses/fullstack-ai' },
+        { id: 'drone-technology', name: 'Drone Technology', hasSubmenu: false, href: '/courses/drone-technology' },
+        { id: '3d-printing', name: '3D Printing', hasSubmenu: false, href: '/courses/3d-printing' },
+        { id: '5g-technology', name: '5G Technology', hasSubmenu: false, href: '/courses/5g-technology' },
+        { id: 'cybersecurity', name: 'Cybersecurity', hasSubmenu: false, href: '/courses/cybersecurity' },
+        { id: 'all-courses', name: 'View All Courses', hasSubmenu: false, href: '/courses' }
     ];
 
     // Resources dropdown items

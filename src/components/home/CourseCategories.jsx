@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import { Bot, Cloud, Code, Settings, Database, BarChart3, Clock, Users, Star } from 'lucide-react';
+import { Brain, Layers, Plane, Box, Radio, Shield, Clock, Users, Star } from 'lucide-react';
 import { courses } from '@/data/courses';
 import styles from './CourseCategories.module.css';
 
@@ -8,29 +8,29 @@ export default function CourseCategories() {
     // Get top 6 featured courses
     const featuredCourses = courses.slice(0, 6);
 
-    const getCourseIcon = (category) => {
+    const getCourseIcon = (slug) => {
         const icons = {
-            'data-science': Bot,
-            'cloud-devops': Cloud,
-            'development': Code,
-            'automation': Settings,
-            'database': Database,
-            'business': BarChart3
+            'ai-ml': Brain,
+            'fullstack-ai': Layers,
+            'drone-technology': Plane,
+            '3d-printing': Box,
+            '5g-technology': Radio,
+            'cybersecurity': Shield
         };
-        return icons[category] || Database;
+        return icons[slug] || Brain;
     };
 
     const getTechTags = (course) => {
-        // Generate tech tags based on course
+        // Generate tech tags based on course slug
         const tagMap = {
-            'data-science': ['Deep Learning', 'NLP', 'LLMs', 'Computer Vision'],
-            'cloud-devops': ['Docker', 'Kubernetes', 'AWS', 'Terraform'],
-            'development': ['React', 'Node.js', 'MongoDB', 'Express'],
-            'automation': ['Selenium', 'Python', 'Jenkins', 'REST API'],
-            'database': ['SQL', 'PostgreSQL', 'MongoDB', 'Redis'],
-            'business': ['Power BI', 'Tableau', 'Excel', 'Statistics']
+            'ai-ml': ['Python', 'TensorFlow', 'PyTorch', 'Deep Learning'],
+            'fullstack-ai': ['React', 'Node.js', 'MongoDB', 'LangChain'],
+            'drone-technology': ['PX4', 'ArduPilot', 'Sensors', 'Navigation'],
+            '3d-printing': ['Fusion 360', 'Cura', 'CAD', 'Materials'],
+            '5g-technology': ['5G NR', 'MIMO', 'Network Slicing', 'IoT'],
+            'cybersecurity': ['Kali Linux', 'Penetration Testing', 'SIEM', 'SOC']
         };
-        return tagMap[course.category] || ['Python', 'SQL', 'Analytics'];
+        return tagMap[course.slug] || course.tools?.slice(0, 4) || ['Python', 'SQL', 'Analytics'];
     };
 
     return (
@@ -49,7 +49,7 @@ export default function CourseCategories() {
                 {/* Course Grid */}
                 <div className={styles.grid}>
                     {featuredCourses.map((course) => {
-                        const IconComponent = getCourseIcon(course.category);
+                        const IconComponent = getCourseIcon(course.slug);
                         return (
                             <div key={course.slug} className={styles.card}>
                                 {/* Card Header with Icon */}
