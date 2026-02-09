@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import { Brain, Layers, Plane, Box, Radio, Shield, Clock, Users, Star } from 'lucide-react';
+import { Brain, Layers, Plane, Box, Radio, Shield, Clock, Users, Star, User } from 'lucide-react';
 import { courses } from '@/data/courses';
 import styles from './CourseCategories.module.css';
 
@@ -18,6 +18,18 @@ export default function CourseCategories() {
             'cybersecurity': Shield
         };
         return icons[slug] || Brain;
+    };
+
+    const getFacultyName = (slug) => {
+        const faculty = {
+            'ai-ml': 'Charan',
+            'fullstack-ai': 'Charan',
+            'drone-technology': 'Sagar',
+            '3d-printing': 'Manish',
+            '5g-technology': 'Chiranjeevi',
+            'cybersecurity': 'Prasad'
+        };
+        return faculty[slug] || 'Expert Faculty';
     };
 
     const getTechTags = (course) => {
@@ -97,10 +109,11 @@ export default function CourseCategories() {
                                     </span>
                                 </div>
 
-                                {/* Price Section */}
-                                <div className={styles.priceSection}>
-                                    <span className={styles.priceLabel}>Training Fee</span>
-                                    <span className={styles.price}>₹{course.price?.toLocaleString() || '60,000'}</span>
+                                {/* Faculty Section - Replaced Price */}
+                                <div className={styles.facultySection}>
+                                    <User size={16} className={styles.facultyIcon} />
+                                    <span className={styles.facultyLabel}>Faculty:</span>
+                                    <span className={styles.facultyName}>{getFacultyName(course.slug)}</span>
                                 </div>
 
                                 {/* CTA Button */}

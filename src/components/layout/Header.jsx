@@ -61,8 +61,8 @@ export default function Header() {
             name: 'UpSkilling',
             hasSubmenu: true,
             items: [
-                { name: 'Kukatpally', href: '/entities/kukatpally' },
-                { name: 'USA', href: '/entities/usa' }
+                { name: 'Kukatpally', href: '/' },
+                { name: 'USA', href: '/' }
             ]
         }
     ];

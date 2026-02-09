@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import Link from 'next/link';
 import { Search, FileText, Download, Users } from 'lucide-react';
 import styles from './page.module.css';
 import { interviewQuestions } from '@/data/interviewQuestions';
@@ -66,10 +67,10 @@ export default function InterviewQuestionsPage() {
                                                 </div>
                                             </td>
                                             <td>
-                                                <a href={item.pdfUrl} className={styles.actionBtn}>
+                                                <Link href={item.pdfUrl} className={styles.actionBtn}>
                                                     <Download size={16} />
-                                                    Read More
-                                                </a>
+                                                    View Course
+                                                </Link>
                                             </td>
                                         </tr>
                                     ))

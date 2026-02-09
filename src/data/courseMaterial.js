@@ -3,108 +3,96 @@ export const courseMaterials = [
     {
         id: 1,
         topic: 'Python for AI/ML - Complete Guide',
-        link: '#',
-        type: 'pdf'
+        link: '/courses/ai-ml',
+        type: 'internal'
     },
     {
         id: 2,
-        topic: 'Deep Learning with TensorFlow & PyTorch',
-        link: '#',
-        type: 'pdf'
+        topic: 'TensorFlow & PyTorch Fundamentals',
+        link: '/courses/ai-ml',
+        type: 'internal'
     },
     {
         id: 3,
-        topic: 'NLP & Transformer Architecture',
-        link: '#',
-        type: 'pdf'
+        topic: 'Deep Learning & Neural Networks',
+        link: '/courses/ai-ml',
+        type: 'internal'
     },
     // Full Stack AI
     {
         id: 4,
-        topic: 'React.js & Node.js Development',
-        link: '#',
-        type: 'pdf'
+        topic: 'MERN Stack Development',
+        link: '/courses/fullstack-ai',
+        type: 'internal'
     },
     {
         id: 5,
-        topic: 'MongoDB & Database Design',
-        link: '#',
-        type: 'pdf'
+        topic: 'React.js Complete Guide',
+        link: '/courses/fullstack-ai',
+        type: 'internal'
     },
     {
         id: 6,
-        topic: 'LangChain & RAG Systems',
-        link: '#',
-        type: 'external'
+        topic: 'Node.js & Express Backend',
+        link: '/courses/fullstack-ai',
+        type: 'internal'
+    },
+    {
+        id: 7,
+        topic: 'LangChain & Agentic AI',
+        link: '/courses/fullstack-ai',
+        type: 'internal'
     },
     // Drone Technology
     {
-        id: 7,
-        topic: 'Drone Aerodynamics & Flight Dynamics',
-        link: '#',
-        type: 'pdf'
-    },
-    {
         id: 8,
-        topic: 'PX4 & ArduPilot Configuration',
-        link: '#',
-        type: 'pdf'
+        topic: 'Drone Engineering Fundamentals',
+        link: '/courses/drone-technology',
+        type: 'internal'
     },
     {
         id: 9,
-        topic: 'Sensor Integration & Calibration',
-        link: '#',
-        type: 'external'
+        topic: 'PX4 & ArduPilot Setup',
+        link: '/courses/drone-technology',
+        type: 'internal'
     },
     // 3D Printing
     {
         id: 10,
-        topic: '3D Printing Technologies (FDM, SLA, SLS)',
-        link: '#',
-        type: 'pdf'
+        topic: '3D Printing Technologies',
+        link: '/courses/3d-printing',
+        type: 'internal'
     },
     {
         id: 11,
-        topic: 'CAD Design with Fusion 360',
-        link: '#',
-        type: 'pdf'
-    },
-    {
-        id: 12,
-        topic: 'Slicing Software & Print Optimization',
-        link: '#',
-        type: 'external'
+        topic: 'Fusion 360 CAD Design',
+        link: '/courses/3d-printing',
+        type: 'internal'
     },
     // 5G Technology
     {
-        id: 13,
-        topic: '5G NR Architecture & Standards',
-        link: '#',
-        type: 'pdf'
+        id: 12,
+        topic: '5G Network Architecture',
+        link: '/courses/5g-technology',
+        type: 'internal'
     },
     {
-        id: 14,
-        topic: 'Network Slicing & Core Network',
-        link: '#',
-        type: 'pdf'
+        id: 13,
+        topic: '5G Deployment & Optimization',
+        link: '/courses/5g-technology',
+        type: 'internal'
     },
     // Cybersecurity
     {
-        id: 15,
+        id: 14,
         topic: 'Ethical Hacking & Penetration Testing',
-        link: '#',
-        type: 'pdf'
+        link: '/courses/cybersecurity',
+        type: 'internal'
     },
     {
-        id: 16,
-        topic: 'OWASP Top 10 & Web Security',
-        link: '#',
-        type: 'pdf'
-    },
-    {
-        id: 17,
-        topic: 'SOC Operations & SIEM',
-        link: '#',
-        type: 'external'
+        id: 15,
+        topic: 'Security Operations Center (SOC)',
+        link: '/courses/cybersecurity',
+        type: 'internal'
     }
 ];
