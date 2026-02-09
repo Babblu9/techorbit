@@ -211,7 +211,7 @@ export default function Header() {
                                     <div className={styles.nestedSubmenu}>
                                         {entities.find(e => e.id === activeSubmenu).items.map(item => (
                                             <Link
-                                                key={item.href}
+                                                key={item.name}
                                                 href={item.href}
                                                 className={styles.nestedSubmenuLink}
                                             >
@@ -373,7 +373,7 @@ export default function Header() {
                                         <div className={styles.mobileSubCategory}>{entity.name}</div>
                                         {entity.items.map(item => (
                                             <Link
-                                                key={item.href}
+                                                key={item.name}
                                                 href={item.href}
                                                 className={styles.mobileSubLink}
                                                 onClick={() => setIsMobileOpen(false)}
