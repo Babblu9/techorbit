@@ -9,31 +9,51 @@ export default function Testimonials() {
     const testimonials = [
         {
             name: 'Priya Reddy',
-            role: 'Data Scientist at Google',
-            text: 'The Data Science program at Techorbit completely transformed my career. The hands-on projects and mentor support helped me land my dream job at Google within 3 months of completing the course.',
+            role: 'AI/ML Engineer at Tech Mahindra',
+            course: 'AI & Machine Learning',
+            text: 'The AI & Machine Learning program at Techorbit completely transformed my career. The hands-on deep learning projects and mentor support helped me land my dream role within 3 months of completing the course.',
             rating: 5,
-            company: 'Google'
-        },
-        {
-            name: 'Karthik Rao',
-            role: 'DevOps Engineer at Amazon',
-            text: 'Best decision I ever made! The DevOps training was incredibly comprehensive. The instructors have real industry experience and the placement team worked tirelessly to get me placed at Amazon.',
-            rating: 5,
-            company: 'Amazon'
+            company: 'Tech Mahindra'
         },
         {
             name: 'Lakshmi Naidu',
-            role: 'Full Stack Developer at Microsoft',
-            text: 'From zero coding knowledge to a developer at Microsoft in 6 months! Techorbit\'s structured curriculum and project-based learning made all the difference. Highly recommended!',
+            role: 'Full Stack AI Developer at Infosys',
+            course: 'Full Stack AI',
+            text: 'From zero coding knowledge to a Full Stack AI Developer in 6 months! Techorbit\'s MERN + Agentic AI curriculum and project-based learning made all the difference. Highly recommended!',
             rating: 5,
-            company: 'Microsoft'
+            company: 'Infosys'
+        },
+        {
+            name: 'Rahul Verma',
+            role: 'Drone Engineer at ideaForge',
+            course: 'Drone Technology',
+            text: 'Building my first autonomous drone in the lab was an incredible experience. The practical approach and exposure to PX4 and ArduPilot prepared me for real industry challenges at ideaForge.',
+            rating: 5,
+            company: 'ideaForge'
+        },
+        {
+            name: 'Sneha Nair',
+            role: 'Cybersecurity Analyst at Deloitte',
+            course: 'Cybersecurity',
+            text: 'The ethical hacking labs and CTF challenges were intense but rewarding. I cleared my CEH certification on the first attempt and got placed at Deloitte within a month of completing the course.',
+            rating: 5,
+            company: 'Deloitte'
+        },
+        {
+            name: 'Karthik Rao',
+            role: '5G Software Testing Engineer at Ericsson',
+            course: '5G Software Testing',
+            text: 'Best decision I ever made! The 5G Software Testing training was incredibly comprehensive. The instructors have real telecom experience and the placement team worked tirelessly to get me placed at Ericsson.',
+            rating: 5,
+            company: 'Ericsson'
         },
         {
             name: 'Venkatesh Kumar',
-            role: 'Cloud Architect at Infosys',
-            text: 'The AWS and Azure training was top-notch. The real-world scenarios and hands-on labs prepared me perfectly for cloud architecture roles. Got promoted within 4 months!',
+            role: '3D Printing Specialist at Stratasys',
+            course: '3D Printing & Additive Manufacturing',
+            text: 'The 3D Printing course was top-notch. Learning CAD design, multiple printing technologies, and real-world prototyping prepared me perfectly for my role in additive manufacturing.',
             rating: 5,
-            company: 'Infosys'
+            company: 'Stratasys'
         },
     ];
 
@@ -104,14 +124,14 @@ export default function Testimonials() {
                 <div className={styles.companies}>
                     <p className={styles.companiesLabel}>Our students work at:</p>
                     <div className={styles.logos}>
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" className={styles.companyLogo} />
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon" className={styles.companyLogo} />
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg" alt="Microsoft" className={styles.companyLogo} />
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Meta_Platforms_Inc._logo.svg" alt="Meta" className={styles.companyLogo} />
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple" className={styles.companyLogo} />
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix" className={styles.companyLogo} />
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Uber_logo_2018.png" alt="Uber" className={styles.companyLogo} />
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Salesforce.com_logo.svg" alt="Salesforce" className={styles.companyLogo} />
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Infosys_logo.svg/320px-Infosys_logo.svg.png" alt="Infosys" className={styles.companyLogo} />
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Tata_Consultancy_Services_Logo.svg/320px-Tata_Consultancy_Services_Logo.svg.png" alt="TCS" className={styles.companyLogo} />
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Deloitte.svg/320px-Deloitte.svg.png" alt="Deloitte" className={styles.companyLogo} />
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Infosys_logo.svg/320px-Infosys_logo.svg.png" alt="Tech Mahindra" className={styles.companyLogo} />
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Ericsson_logo.svg/320px-Ericsson_logo.svg.png" alt="Ericsson" className={styles.companyLogo} />
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Wipro_Primary_Logo_Color_RGB.svg/320px-Wipro_Primary_Logo_Color_RGB.svg.png" alt="Wipro" className={styles.companyLogo} />
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/DRDO_logo.png/200px-DRDO_logo.png" alt="DRDO" className={styles.companyLogo} />
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Qualcomm-Logo.svg/320px-Qualcomm-Logo.svg.png" alt="Qualcomm" className={styles.companyLogo} />
                     </div>
                 </div>
             </div>
