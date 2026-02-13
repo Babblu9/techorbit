@@ -124,14 +124,14 @@ export default function Testimonials() {
                 <div className={styles.companies}>
                     <p className={styles.companiesLabel}>Our students work at:</p>
                     <div className={styles.logos}>
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Infosys_logo.svg/320px-Infosys_logo.svg.png" alt="Infosys" className={styles.companyLogo} />
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Tata_Consultancy_Services_Logo.svg/320px-Tata_Consultancy_Services_Logo.svg.png" alt="TCS" className={styles.companyLogo} />
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Deloitte.svg/320px-Deloitte.svg.png" alt="Deloitte" className={styles.companyLogo} />
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Infosys_logo.svg/320px-Infosys_logo.svg.png" alt="Tech Mahindra" className={styles.companyLogo} />
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Ericsson_logo.svg/320px-Ericsson_logo.svg.png" alt="Ericsson" className={styles.companyLogo} />
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Wipro_Primary_Logo_Color_RGB.svg/320px-Wipro_Primary_Logo_Color_RGB.svg.png" alt="Wipro" className={styles.companyLogo} />
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/DRDO_logo.png/200px-DRDO_logo.png" alt="DRDO" className={styles.companyLogo} />
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Qualcomm-Logo.svg/320px-Qualcomm-Logo.svg.png" alt="Qualcomm" className={styles.companyLogo} />
+                        <img src="/images/companies/infosys.svg" alt="Infosys" className={styles.companyLogo} />
+                        <img src="/images/companies/tcs.svg" alt="TCS" className={styles.companyLogo} />
+                        <img src="/images/companies/deloitte.svg" alt="Deloitte" className={styles.companyLogo} />
+                        <img src="/images/companies/tech-mahindra.svg" alt="Tech Mahindra" className={styles.companyLogo} />
+                        <img src="/images/companies/ericsson.svg" alt="Ericsson" className={styles.companyLogo} />
+                        <img src="/images/companies/wipro.svg" alt="Wipro" className={styles.companyLogo} />
+                        <img src="/images/companies/drdo.svg" alt="DRDO" className={styles.companyLogo} />
+                        <img src="/images/companies/qualcomm.svg" alt="Qualcomm" className={styles.companyLogo} />
                     </div>
                 </div>
             </div>
