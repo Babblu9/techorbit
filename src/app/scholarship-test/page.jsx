@@ -7,7 +7,7 @@ import { scholarshipQuestions } from '../../data/scholarshipQuestions';
 
 export default function ScholarshipTest() {
     const [testState, setTestState] = useState('registration'); // registration, active, results
-    const [studentData, setStudentData] = useState({ name: '', email: '', phone: '', course: '' });
+    const [studentData, setStudentData] = useState({ name: '', email: '', phone: '' });
 
     // Flatten only MCQ questions for the automated client-side test
     const [questions, setQuestions] = useState([]);
@@ -17,20 +17,21 @@ export default function ScholarshipTest() {
     const [testResult, setTestResult] = useState(null);
 
     useEffect(() => {
-        // Extract MCQ questions from data
         if (scholarshipQuestions && scholarshipQuestions.sections) {
             const mcqs = scholarshipQuestions.sections
                 .flatMap(s => s.questions)
                 .filter(q => q.type === 'mcq');
-            setQuestions(mcqs);
+            
+            const shuffled = [...mcqs].sort(() => Math.random() - 0.5);
+            setQuestions(shuffled);
         }
     }, []);
 
     const handleRegistrationSubmit = (e) => {
         e.preventDefault();
-        if (studentData.name && studentData.email && studentData.phone && studentData.course) {
+        if (studentData.name && studentData.email && studentData.phone) {
             setTestState('active');
-            setTimeLeft(15 * 60); // Reset timer
+            setTimeLeft(15 * 60);
         } else {
             alert('Please fill all fields');
         }
@@ -42,13 +43,7 @@ export default function ScholarshipTest() {
 
     const calculateScholarship = (percentage) => {
         const originalFee = 45000;
-        let scholarshipPercentage = 15; // default
-
-        if (percentage >= 90) scholarshipPercentage = 100;
-        else if (percentage >= 80) scholarshipPercentage = 60;
-        else if (percentage >= 70) scholarshipPercentage = 50;
-        else if (percentage >= 50) scholarshipPercentage = 40;
-        else if (percentage >= 35) scholarshipPercentage = 25;
+        const scholarshipPercentage = 40;
 
         const amount = (originalFee * scholarshipPercentage) / 100;
         return {
@@ -103,7 +98,7 @@ export default function ScholarshipTest() {
             <div className={styles.container}>
                 <div className={styles.header}>
                     <h1>Techorbit <span>Scholastic Assessment Test</span> (TSAT Exam)</h1>
-                    <p>Take our TSAT exam to earn up to 100% scholarship on TechOrbit&apos;s premium IT programs.</p>
+                    <p>Take our TSAT exam and get 40% scholarship on all TechOrbit&apos;s premium IT programs.</p>
                 </div>
 
                 <div className={styles.registrationCard}>
@@ -139,21 +134,6 @@ export default function ScholarshipTest() {
                                 onChange={e => setStudentData({ ...studentData, phone: e.target.value })}
                                 required
                             />
-                        </div>
-                        <div className={styles.formGroup}>
-                            <label className={styles.label}>Interested Course</label>
-                            <select
-                                className={styles.select}
-                                value={studentData.course}
-                                onChange={e => setStudentData({ ...studentData, course: e.target.value })}
-                                required
-                            >
-                                <option value="">Select a Course</option>
-                                <option value="Full Stack Development">Full Stack Development</option>
-                                <option value="Data Science">Data Science</option>
-                                <option value="Cloud Computing">Cloud Computing</option>
-                                <option value="Cyber Security">Cyber Security</option>
-                            </select>
                         </div>
                         <button type="submit" className={styles.submitBtn}>
                             Start TSAT Exam
@@ -288,7 +268,7 @@ export default function ScholarshipTest() {
                         <div className={styles.scholarshipSection}>
                             <div className={styles.scholarshipTitle}>Your Scholarship</div>
                             <div className={styles.scholarshipValue}>{scholarship.percentage}%</div>
-                            <div className={styles.scholarshipSubtitle}>on {studentData.course}</div>
+                            <div className={styles.scholarshipSubtitle}>on all TechOrbit courses</div>
 
                             <div className={styles.feeBreakdown}>
                                 <div className={styles.feeRow}>
