@@ -130,12 +130,12 @@ export default function SkillToJobPage() {
                                 <tr>
                                     <td><strong>Post-Placement Fee</strong></td>
                                     <td>Fresher Package</td>
-                                    <td className={styles.highlightCell}>₹30,000 + GST</td>
+                                    <td className={styles.highlightCell}>1 Month Salary + GST</td>
                                 </tr>
                                 <tr>
                                     <td><strong>Post-Placement Fee</strong></td>
                                     <td>Experienced (5.1 – 10 LPA)</td>
-                                    <td className={styles.highlightCell}>₹50,000 + GST</td>
+                                    <td className={styles.highlightCell}>1 Month Salary + GST</td>
                                 </tr>
                                 <tr>
                                     <td><strong>Post-Placement Fee</strong></td>

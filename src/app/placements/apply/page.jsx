@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import Link from 'next/link';
 import {
     Briefcase, MapPin, Send, User, Phone, Mail, FileText,
     CheckCircle, Eye, X, Clock, IndianRupee, Building2
@@ -48,6 +49,30 @@ export default function ApplyJobsPage() {
             <section className={styles.hero}>
                 <h1 className={styles.title}>Apply For Jobs</h1>
                 <p className={styles.subtitle}>Find your dream job with Techorbit placement support</p>
+            </section>
+
+            {/* Interview Preparation CTA */}
+            <section style={{ background: '#f8fafc', padding: '2rem 1rem', textAlign: 'center' }}>
+                <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+                    <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '0.5rem' }}>Prepare for Your Interview</h2>
+                    <p style={{ color: '#64748b', marginBottom: '1.5rem' }}>Access free interview questions and resume tips to boost your chances</p>
+                    <Link 
+                        href="/resources/interview-questions" 
+                        style={{ 
+                            display: 'inline-flex', 
+                            alignItems: 'center', 
+                            gap: '0.5rem',
+                            background: '#0ea5e9', 
+                            color: 'white', 
+                            padding: '0.75rem 1.5rem', 
+                            borderRadius: '8px',
+                            fontWeight: 600,
+                            textDecoration: 'none'
+                        }}
+                    >
+                        <FileText size={18} /> Browse Interview Questions
+                    </Link>
+                </div>
             </section>
 
             {/* Main Content */}
