@@ -192,7 +192,7 @@ export const scholarshipQuestions =
           "correctAnswer": 0,
           "marks": 5,
           "difficulty": "medium",
-          "cognitiveSkills": "Boats and Streams",
+          "cognitiveSkills": ["Boats and Streams"],
           "explanation": {
             "stepByStep": [
               "Speed in still water = (Upstream + Downstream) / 2",
@@ -280,9 +280,9 @@ export const scholarshipQuestions =
           "cognitiveSkills": ["Coding-Decoding", "Letter Substitution"],
           "explanation": {
             "pattern": "Each letter is shifted one position backward in alphabet",
-            "S→R, I→H, S→R, T→S, E→D, R→Q",
-            "B→A, R→Q, O→N, T→S, H→G, E→D, R→Q",
-            "BROTHER = AQNSGDQ"
+            "transformation1": "S to R, I to H, S to R, T to S, E to D, R to Q",
+            "transformation2": "B to A, R to Q, O to N, T to S, H to G, E to D, R to Q",
+            "result": "BROTHER = AQNSGDQ"
           },
           "category": "Logical Reasoning"
         },
