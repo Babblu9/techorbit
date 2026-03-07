@@ -101,8 +101,8 @@ export default function ScholarshipTest() {
         return (
             <div className={styles.container}>
                 <div className={styles.header}>
-                    <h1>TechOrbit <span>Scholarship Test</span> (FSAT)</h1>
-                    <p>Take our aptitude test to earn up to 100% scholarship on TechOrbit's premium IT programs.</p>
+                    <h1>Techorbit <span>Scholastic Assessment Test</span> (TSAT Exam)</h1>
+                    <p>Take our TSAT exam to earn up to 100% scholarship on TechOrbit's premium IT programs.</p>
                 </div>
 
                 <div className={styles.registrationCard}>
@@ -155,7 +155,7 @@ export default function ScholarshipTest() {
                             </select>
                         </div>
                         <button type="submit" className={styles.submitBtn}>
-                            Start Scholarship Test
+                            Start TSAT Exam
                         </button>
                     </form>
                 </div>
@@ -276,7 +276,7 @@ export default function ScholarshipTest() {
 
                         <div className={styles.resultHeader}>
                             <h2>Test Completed!</h2>
-                            <p>Thank you for taking the TechOrbit Scholarship Assessment.</p>
+                            <p>Thank you for taking the Techorbit Scholastic Assessment Test (TSAT).</p>
                         </div>
 
                         <div className={styles.scoreCircle}>
