@@ -77,7 +77,7 @@ export default function InterviewQuestionsPage() {
                                 ) : (
                                     <tr>
                                         <td colSpan="4" style={{ textAlign: 'center', padding: '40px', color: 'var(--gray-500)' }}>
-                                            No interview questions found matching "{searchTerm}"
+                                            No interview questions found matching &quot;{searchTerm}&quot;
                                         </td>
                                     </tr>
                                 )}

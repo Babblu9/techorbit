@@ -9,7 +9,7 @@ export default function NotFound() {
                 <div className={styles.errorCode}>404</div>
                 <h1 className={styles.title}>Page Not Found</h1>
                 <p className={styles.description}>
-                    Sorry, we can't find the page you are looking for. The page might have been moved, deleted, or the URL might be incorrect.
+                    Sorry, we can&apos;t find the page you are looking for. The page might have been moved, deleted, or the URL might be incorrect.
                 </p>
                 <Link href="/" className={styles.homeBtn}>
                     <Home size={20} />

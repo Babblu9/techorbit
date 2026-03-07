@@ -100,7 +100,7 @@ export default function Testimonials() {
                                         ))}
                                     </div>
                                     <blockquote className={styles.quote}>
-                                        "{testimonial.text}"
+                                        &ldquo;{testimonial.text}&rdquo;
                                     </blockquote>
                                 </div>
                             </div>

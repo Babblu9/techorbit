@@ -170,7 +170,7 @@ export default function ApplyJobsPage() {
                             <div className={styles.successMessage}>
                                 <CheckCircle size={56} />
                                 <h2>Application Submitted!</h2>
-                                <p>We'll get back to you within 2-3 business days.</p>
+                                <p>We&apos;ll get back to you within 2-3 business days.</p>
                             </div>
                         ) : (
                             <>

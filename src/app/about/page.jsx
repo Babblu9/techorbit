@@ -48,7 +48,7 @@ export default function AboutPage() {
                         <div className={styles.missionVisual}>
                             <div className={styles.visualCard}>
                                 <h3>Our Vision</h3>
-                                <p>To be India's most trusted IT training institute, recognized for producing industry-ready professionals who drive innovation and growth.</p>
+                                <p>To be India&apos;s most trusted IT training institute, recognized for producing industry-ready professionals who drive innovation and growth.</p>
                             </div>
                         </div>
                     </div>

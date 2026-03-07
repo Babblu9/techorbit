@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+/* eslint-disable react-hooks/set-state-in-effect */
+import React, { useState, useEffect, useCallback } from 'react';
 import styles from './page.module.css';
 import { scholarshipQuestions } from '../../data/scholarshipQuestions';
 
@@ -24,16 +25,6 @@ export default function ScholarshipTest() {
             setQuestions(mcqs);
         }
     }, []);
-
-    useEffect(() => {
-        let timer;
-        if (testState === 'active' && timeLeft > 0) {
-            timer = setInterval(() => setTimeLeft(prev => prev - 1), 1000);
-        } else if (timeLeft === 0 && testState === 'active') {
-            submitTest();
-        }
-        return () => clearInterval(timer);
-    }, [testState, timeLeft]);
 
     const handleRegistrationSubmit = (e) => {
         e.preventDefault();
@@ -68,7 +59,7 @@ export default function ScholarshipTest() {
         };
     };
 
-    const submitTest = () => {
+    const submitTest = useCallback(() => {
         let totalScore = 0;
         let maxScore = 0;
 
@@ -89,7 +80,17 @@ export default function ScholarshipTest() {
             scholarship
         });
         setTestState('results');
-    };
+    }, [questions, answers]);
+
+    useEffect(() => {
+        let timer;
+        if (testState === 'active' && timeLeft > 0) {
+            timer = setInterval(() => setTimeLeft(prev => prev - 1), 1000);
+        } else if (timeLeft === 0 && testState === 'active') {
+            submitTest();
+        }
+        return () => clearInterval(timer);
+    }, [testState, timeLeft, submitTest]);
 
     const formatTime = (seconds) => {
         const m = Math.floor(seconds / 60);
@@ -102,7 +103,7 @@ export default function ScholarshipTest() {
             <div className={styles.container}>
                 <div className={styles.header}>
                     <h1>Techorbit <span>Scholastic Assessment Test</span> (TSAT Exam)</h1>
-                    <p>Take our TSAT exam to earn up to 100% scholarship on TechOrbit's premium IT programs.</p>
+                    <p>Take our TSAT exam to earn up to 100% scholarship on TechOrbit&apos;s premium IT programs.</p>
                 </div>
 
                 <div className={styles.registrationCard}>
