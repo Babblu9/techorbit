@@ -73,6 +73,9 @@ export default function Header() {
         { name: 'Alumni', href: '/placements/alumni' }
     ];
 
+    // TSAT Test button link
+    const tsatLink = '/scholarship-test';
+
     // Upcoming Batches dropdown items
     const upcomingBatches = [
         { name: 'Training Courses', href: '/batches/training' },
@@ -273,6 +276,9 @@ export default function Header() {
                 {/* Contact Us CTA - Desktop */}
                 <Link href="/contact" className={`${styles.contactBtn} ${styles.desktopContactBtn}`}>
                     Contact Us
+                </Link>
+                <Link href={tsatLink} className={`${styles.contactBtn} ${styles.tsatBtn}`}>
+                    TSAT Test
                 </Link>
 
                 {/* Mobile Toggle */}

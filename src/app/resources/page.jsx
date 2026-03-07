@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { FileText, BookOpen, Video, Book, FlaskConical, BarChart3 } from 'lucide-react';
+import { FileText, BookOpen, Video, Book, FlaskConical, BarChart3, FileSignature } from 'lucide-react';
 import styles from './page.module.css';
 
 export const metadata = {
@@ -10,6 +10,7 @@ export const metadata = {
 export default function ResourcesPage() {
     const resources = [
         { icon: FileText, title: 'Interview Questions', desc: 'Comprehensive question banks for various technologies', items: ['Java', 'Python', 'React', 'SQL', 'AWS'] },
+        { icon: FileSignature, title: 'Resume Building', desc: 'Learn how to create a winning resume', items: ['Resume Tips', 'Format Guide', 'ATS Optimization'] },
         { icon: BookOpen, title: 'Cheat Sheets', desc: 'Quick reference guides for popular tools', items: ['Git', 'Docker', 'Linux', 'Kubernetes', 'SQL'] },
         { icon: Video, title: 'Free Videos', desc: 'Sample training videos and tutorials', items: ['Intro courses', 'Tool demos', 'Career talks'] },
         { icon: Book, title: 'E-Books', desc: 'Downloadable learning materials', items: ['Career guides', 'Tech primers', 'Study plans'] },
@@ -43,7 +44,10 @@ export default function ResourcesPage() {
                                             <li key={j}>{item}</li>
                                         ))}
                                     </ul>
-                                    <Link href={`/resources/${r.title.toLowerCase().replace(' ', '-')}`} className={styles.link}>
+                                    <Link 
+                                        href={r.title === 'Resume Building' ? '/resources/interview-questions' : `/resources/${r.title.toLowerCase().replace(' ', '-')}`} 
+                                        className={styles.link}
+                                    >
                                         Access Now →
                                     </Link>
                                 </div>

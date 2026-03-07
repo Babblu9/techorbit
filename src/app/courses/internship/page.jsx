@@ -77,10 +77,10 @@ export default function InternshipCoursesPage() {
                                                     <Download size={14} />
                                                     Curriculum
                                                 </Link>
-                                                <button className={styles.registerBtn}>
+                                                <Link href="/contact" className={styles.registerBtn}>
                                                     Register
                                                     <ArrowRight size={14} />
-                                                </button>
+                                                </Link>
                                             </div>
                                         </td>
                                     </tr>
