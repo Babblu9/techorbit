@@ -10,7 +10,7 @@ export default function ContactPage() {
         e.preventDefault();
 
         // WhatsApp number with country code (India +91)
-        const whatsappNumber = '919177477855';
+        const whatsappNumber = '+91 9177477855';
 
         // Get the reason (use custom if "Other" selected)
         const finalReason = formData.reason === 'Other' ? formData.customReason : formData.reason;
